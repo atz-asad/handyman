@@ -1,0 +1,135 @@
+  /****************************/
+ /******** global CSS ********/
+/****************************/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+//  font-family: "Jost", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+// font-family: "Marcellus", serif;
+
+
+
+:root{
+  --bs-primary: #FF385C;
+  --bs-primary-rgb: 255, 56, 92;
+  --bs-body-bg: #FFFFFF;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-color: #686868;
+  --bs-body-color-rgb: 104, 104, 104;
+  --bs-heading-color: #2E020A;
+  --bs-heading-color-rgb: 46, 2, 10;
+  --bs-border: #EAEAEA;
+  --bs-border-rgb: 234, 234, 234;
+  
+  --bs-heading-color-style2: #0D0C1B;
+  --bs-heading-color-rgb-style2:13, 12, 27;
+
+  --bs-secondary: #FFF9F5;
+  --bs-secondary-rgb: 255, 249, 245;
+
+  --bs-body-font-family: "Jost", sans-serif;
+  --bs-heading-font-family: "Marcellus", serif;
+
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body-font{
+  font-family: var(--bs-body-font-family);
+}
+
+h2{
+  line-height: 1.228;
+}
+
+.reset-ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: currentColor;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*=====================================
+======== Custom Animation ============
+======================================*/
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+}
+
+.rotate{
+  animation: rotate-90 0.9s linear 0.9s infinite forwards;
+}
+
+
+@keyframes rotate-90{
+  0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+  }
+  100% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+/*=====================================
+======== Custom Animation ============
+======================================*/
+
+
+.back-to-top{
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  &:hover{
+    box-shadow: rgba(var(--bs-primary-rgb), 0.8) 0px 3px 10px;
+  }
+}
+
+

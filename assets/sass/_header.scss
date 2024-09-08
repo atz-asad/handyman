@@ -1,0 +1,368 @@
+  /**************************/
+ /******** header CSS ******/
+/**************************/
+
+
+/* bootstap header menu */
+.navbar .nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-body-color);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.navbar .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  clear: both;
+  font-weight: 500;
+  color: var(--bs-body-color);
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  transition: all .4s ease;
+  
+}
+.navbar .dropdown-item.active{
+  color: #15100C;
+}
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar-nav .dropdown-menu li{
+    position: relative;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid  var(--bs-border);
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+  .navbar-nav .dropdown-menu .submenu{ 
+    display: none;
+    position: absolute;
+    left:100%; 
+    top:-2px;
+    animation:fadeInUp 500ms ease-in-out forwards
+  }
+  .navbar-nav .dropdown-menu .submenu-left{ 
+    right:100%; 
+    left:auto;
+  }
+  .navbar-nav .dropdown-menu > li:hover{
+    background-color: rgba(var(--bs-body-bg-rgb) .7);
+    padding-left: 10px;
+    
+  }
+  .navbar-nav .dropdown-menu > li:hover > .submenu{
+    display: block; 
+  }
+}	
+.nav-link.dropdown-toggle::after {
+  content: "+";
+  border: 0;
+  margin: 0  0 0 5px;
+  font-family: "Font Awesome 6 Pro";
+  font-size: 12px;
+  top: 3px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-link:hover.dropdown-toggle::after{
+  transform: rotate(90deg);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color:  #15100C;
+}
+.navbar .dropdown-item:hover, .dropdown-item:focus {
+  color:  #15100C;
+  background-color: rgba(var(--bs-body-bg-rgb), 0.7);
+}
+.navbar-nav .nav-link .dropdown-toggle .active,
+.navbar-nav .dropdown .dropdown-menu.show .dropdown-item::before {
+  content: "";
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  height: 7px;
+  width: 7px;
+  transform: translateY(-50%) scale(0);
+  border-radius: 50%;
+  background: #15100C;
+  transition: transform 0.4s, opacity 0.4s ease, top 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+
+}
+.navbar-nav .nav-link .dropdown-toggle .active,
+.navbar-nav .dropdown .dropdown-menu.show .dropdown-item:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+@keyframes fadeInDown {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0,-100%,0);
+      transform: translate3d(0,-100%,0)
+  }
+
+  to {
+      opacity: 1;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0)
+  }
+}
+/* ============ desktop view .end// ============ */
+
+.navbar .dropdown .dropdown-menu.show {
+  transition: all .5s ease-in-out;
+  --bs-border-radius: 0 0 10px 10px;
+  --bs-dropdown-spacer: 0;
+  --bs-dropdown-border-width: 0;
+  --bs-dropdown-link-hover-color: var(--bs-primary);
+  --bs-dropdown-link-active-color: var(--bs-primary);
+  --bs-dropdown-link-hover-bg: transparent;
+  --bs-dropdown-link-active-bg: transparent;
+  --bs-dropdown-item-padding-x: 20px;
+  --bs-dropdown-item-padding-y: 8px;
+  --bs-dropdown-font-size: 16px;
+  --bs-dropdown-max-width: 5rem;
+  --bs-dropdown-item-separator-color: var(--bs-dropdown-link-color);
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+  // overflow: hidden;
+}
+
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}
+
+
+
+/* ============ small devices ============ */
+
+// menu icon btn
+.menu-toggler {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: var(--bs-primary);
+  z-index: 1000;
+  transition: all 0.4s ease;
+  &:hover{
+    box-shadow: 0px 0px 5px 5px rgba(var(--bs-primary-rgb), 0.24);
+  }
+}
+.menu-toggler span {
+  position: relative;
+  display: block;
+  width: 22px;
+  margin-inline: auto;
+  height: 2px;
+  background: var(--bs-white);
+  border-radius: 10px;
+  transition: transform 200ms 0ms, top 200ms 160ms;
+}
+.menu-toggler span:nth-child(1) {
+  top: -4px;
+}
+.menu-toggler span:nth-child(3) {
+  top: 4px;
+}
+
+/*===========================================
+================= menu offcanvas ============
+===========================================*/ 
+.offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
+  --bs-offcanvas-width: 300px;
+}
+
+#mobilemenu-offcanvas{
+  .header-user-btn {
+    padding: 2px 16px;
+  }
+  .dropdown-item:hover, .dropdown-item:focus {
+    color: #15100C;
+    background-color: transparent;
+  }
+}
+.menu-close {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  &:hover{
+    box-shadow: 0px 0px 5px 5px rgba(var(--bs-primary-rgb), 0.24);
+  }
+}
+
+.main_nenu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-direction: column;
+}
+
+.main_nenu ul .menu-item .dropdown {
+  display: none;
+  left: 20px;
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  padding: 0 20px 0px 0;
+  z-index: 3;
+}
+
+.main_nenu ul .menu-item .dropdown .submenu{
+  display: none;
+  left: 20px;
+  position: relative;
+}
+.main_nenu ul .dropdown-arrow {
+  position: relative;
+}
+.main_nenu ul .dropdown-arrow::before {
+  position: absolute;
+  font-family: "Font Awesome 6 Pro";
+  content: "\2b";
+  right: 0px;
+  font-size: 14px;
+  top: 10px;
+  color: var(--bs-heading-color);
+  transition: all 0.3s ease;
+}
+.main_nenu ul .openUL.dropdown-arrow::before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f068";
+  color: var(--bs-primary);
+}
+.main_nenu ul .submenu .dropdown-arrow::before {
+  right: 20px;
+}
+.main_nenu li a {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  color: var(--bs-heading-color);
+  border-bottom: 1px solid var(--bs-border);
+  transition: all 0.3s ease;
+  padding: 10px 10px 10px 0;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  &:hover{
+    color: var(--bs-primary);
+  }
+}
+.main_nenu li a.active{
+  color: var(--bs-primary);
+}
+/*===========================================
+=================End menu offcanvas ============
+===========================================*/ 
+
+/*
+Header Buttons 
+*/
+.header-Buttons{
+  display: flex;
+  gap: 14px;
+}
+
+.language-select{
+  border: none;
+  padding-left: 6px;
+  padding-right: 16px;
+}
+.header-user-btn{
+  border-radius: 6px;
+  padding: 2px 10px;
+  min-width: 100px;
+  border: 1px solid var(--bs-border);
+  .user-btn{
+    padding: 10px 14px 10px 5px;
+    box-shadow: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+  }
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "\f107";
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 700;
+    border: 0;
+    border-bottom: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .dropdown-menu{
+    min-width: 100px;
+  }
+  .dropdown-item{
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.nice-select:after {
+  position: absolute;
+  pointer-events: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--bs-body-color);
+  border-right: 2px solid var(--bs-body-color);
+  display: block;
+  height: 7px;
+  width: 7px;
+  margin-top: -5px;
+  right: 5px;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  -ms-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+/*===================================
+============== Header Sticky ========
+====================================*/
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: fadeInDown 0.5s;
+  background: var(--bs-body-bg);
+}

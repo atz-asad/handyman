@@ -1,0 +1,328 @@
+  /***********************************/
+ /******** TESTIMONIAL CSS *********/
+/***********************************/
+
+.testmonial-thump{
+  padding-bottom: 30px;
+  .testmonial-thump-item{
+    text-align: center;
+    .author-image{
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .author-name{
+      color: #0F0508;
+      font-family: var(--bs-body-font-family);
+    }
+  }
+  .swiper-pagination {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    border-radius: 0;
+    height: 4px;
+    background: #B7B7B7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+      background: var(--bs-primary);
+  }
+
+}
+
+.testmonial-wrapper{
+  position: relative;
+
+  .testimonial-image{
+    width: 134px;
+    height: 210px;
+    border-radius: 78.5px;
+    overflow: hidden;
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .testimonial-image-1{
+    position: absolute;
+    left: 70px;
+    top: 40px;
+  }
+  .testimonial-image-2{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+  }
+  .testimonial-image-3{
+    position: absolute;
+    right: 170px;
+    bottom: 30px;
+  }
+  .testimonial-image-4{
+    position: absolute;
+    left: 173px;
+    bottom: 30px;
+  }
+}
+
+
+.testmonial-iamge-wrapper-2{
+  position: relative;
+  height: 340px;
+  margin-right: 40px;
+  @include media-breakpoint-down(xxl){
+    margin-right: 30px;
+  }
+  @include media-breakpoint-down(xl){
+    margin-right: 0px;
+  }
+  .testmonial-iamge-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .testmonial-iamge-2{
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+    @include media-breakpoint-down(xxl){
+      left: 6%;
+    }
+    @include media-breakpoint-down(xl){
+      left: 0;
+      transform: translate(0%, -50%);
+    }
+    @include media-breakpoint-down(lg){
+      left: 12%;
+      transform: translate(0%, -50%);
+    }
+    @include media-breakpoint-down(sm){
+      left: 8%;
+      transform: translate(0%, -50%);
+    }
+  }
+  .testmonial-iamge-3{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .testmonial-iamge-4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 147px;
+    width: 147px;
+    border-radius: 50%;
+    object-fit: cover;
+    @include media-breakpoint-down(sm){
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .testmonial-iamge-5{
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+    @include media-breakpoint-down(xxl){
+      right: 0%;
+    }
+    @include media-breakpoint-down(xl){
+      right: 0;
+      transform: translate(0%, -50%);
+    }
+    @include media-breakpoint-down(lg){
+      right: 12%;
+      transform: translate(0%, -50%);
+    }
+    @include media-breakpoint-down(sm){
+      right: 8%;
+      transform: translate(0%, -50%);
+    }
+  }
+  .testmonial-iamge-6{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .testmonial-iamge-7{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.testmonial-wrapper-2{
+  padding-left: 80px;
+  position: relative;
+  @include media-breakpoint-down(xl){
+    padding-left: 45px;
+  }
+  .testmonial-pagination {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #B7B7B7;
+    border: 3px solid #B7B7B7;
+    outline: 3px solid #B7B7B7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    border: 3px solid #f60;
+  }
+}
+
+
+.testmonial-thump-2{
+  .testmonial-thump-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .author-image{
+      min-height: 60px;
+      min-width: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .author-name{
+      color: #0F0508;
+      font-family: var(--bs-body-font-family);
+    }
+  }
+  
+
+}
+
+
+// ====== slider-wrapper 3 ======
+.slider-wrapper-3{
+  position: relative;
+  padding-bottom: 50px;
+  .testmonial-pagination {
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translatex(-50%);
+    width: auto;
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #B7B7B7;
+    opacity: 1;
+    border-radius: 50%;
+  }
+  .swiper-pagination-bullet-active {
+    background: rgba(var(--bs-primary-rgb), 0.50);
+    width: 50px;
+    border-radius: 15px;
+  }
+
+}
+
+.testmonial-slider-item-style-3{
+  display: flex;
+  gap: 12px;
+  background: #FBFBFB;
+  padding: 20px 20px  0 12px;
+  border-radius: 12px;
+  @include media-breakpoint-down(sm){
+    flex-direction: column;
+  }
+  .author-image{
+    min-width: 154px;
+    height: 218px;
+  }
+  .author-name{
+    font-family: var(--bs-body-font-family);
+    color: var(--bs-heading-color-style2);
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+  /***********************************/
+ /********  SECTION CTA CSS *********/
+/***********************************/
+
+.cta-wrapper{
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  &::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #000 19.88%, rgba(0, 0, 0, 0.00) 100%);
+    z-index: -1;
+  }
+}
