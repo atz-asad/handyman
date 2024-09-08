@@ -1,0 +1,84 @@
+  /*************************/
+ /******** BLOG CSS *******/
+/*************************/
+
+
+ /*========= BLOG slider css =========*/
+.blog-slider-wrapper{
+    position: relative;
+    .blog-slider-thumb-wrapper{
+        position: absolute;
+        left: 50%;
+        bottom: 24px;
+        width: 500px;
+        transform: translateX(-50%);
+        z-index: 1;
+        .blog-slider-prev{
+            position: absolute;
+            left: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        .blog-slider-next{
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+
+}
+.blog-slider-item{
+    height: 460px;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    &::after{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        border-radius: 8px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 36.63%, rgba(0, 0, 0, 0.99) 94.13%);
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+}
+.blog-slider-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog-slider-thumb{
+    position: relative;
+    .blog-slider-thumb-item{
+        height: 90px;
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    
+}
+.blog-slider-next,
+.blog-slider-prev{
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    text-align: center;
+    line-height: 38px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}

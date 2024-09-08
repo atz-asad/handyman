@@ -306,6 +306,85 @@
         });
     }
 
+
+
+    // ====== range slider =========
+    if ($('.progress').length > 0) {
+
+        const rangeMin = document.querySelector(".range-min");
+        const rangeMax = document.querySelector(".range-max");
+        const inputMin = document.querySelector(".input-min");
+        const inputMax = document.querySelector(".input-max");
+        const progress = document.querySelector(".progress");
+    
+        function updateProgressBar() {
+            const min = parseInt(rangeMin.value);
+            const max = parseInt(rangeMax.value);
+            const range = rangeMax.max - rangeMin.min;
+            
+            progress.style.left = ((min - rangeMin.min) / range) * 100 + "%";
+            progress.style.right = ((rangeMax.max - max) / range) * 100 + "%";
+        }
+        rangeMin.addEventListener("input", () => {
+            let minValue = parseInt(rangeMin.value);
+            let maxValue = parseInt(rangeMax.value);
+            
+            if (minValue >= maxValue - 500) {
+                rangeMin.value = maxValue - 500; 
+            }
+            inputMin.value = rangeMin.value;
+            updateProgressBar();
+        });
+        rangeMax.addEventListener("input", () => {
+            let minValue = parseInt(rangeMin.value);
+            let maxValue = parseInt(rangeMax.value);
+            
+            if (maxValue <= minValue + 500) {
+                rangeMax.value = minValue + 500; 
+            }
+            inputMax.value = rangeMax.value;
+            updateProgressBar();
+        });
+        inputMin.addEventListener("input", () => {
+            rangeMin.value = inputMin.value;
+            rangeMin.dispatchEvent(new Event("input"));
+        });
+    
+        inputMax.addEventListener("input", () => {
+            rangeMax.value = inputMax.value;
+            rangeMax.dispatchEvent(new Event("input"));
+        });
+        updateProgressBar();
+    }
+    //===== End range slider ======
+  
+    var swiper = new Swiper(".blog-slider-thumb", {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        speed: 1000,
+    });
+    var swiper2 = new Swiper(".blog-slider", {
+        spaceBetween: 10,
+        speed: 1000,
+        effect: 'fade',
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+          nextEl: ".blog-slider-next",
+          prevEl: ".blog-slider-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+    });
+
+
+
+
+
+
+
+
     
 })(jQuery);
 

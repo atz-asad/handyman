@@ -224,8 +224,9 @@
             </div>
         </section>
         <!-- ========= END BANNER ========= -->
-        
-        <section class="section-cta py-100">
+
+        <!-- ========= start section ========= -->
+        <section class="section py-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -276,63 +277,66 @@
                                 </div>
                             </div>
                             <!-- sidebar-widget -->
-                            <div class="sidebar-widget">
+                            <div class="sidebar-widget border-bottom pb-10 mb-30">
                                 <h4 class="mb-20">Service Details</h4>
                                 <form>
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item">
                                         <label for="service_name">Service Name</label>
-                                        <select class="language-select right" id="service_name" aria-label="Default select example">
+                                        <select class="right" id="service_name" aria-label="Default select example">
                                             <option selected>Home Cleaning</option>
                                             <option value="plumber cleaning">Plumber Cleaning</option>
                                             <option value="Car Cleaning">Car Cleaning</option>
                                         </select>
                                     </div>
-
-                                    <div class="d-flex flex-column">
-                                        <label for="provider_level">Provider Level</label>
-                                        <select class="language-select right" id="provider_level" aria-label="Default select example">
-                                            <option selected>Expert</option>
-                                            <option value="proficient">Proficient</option>
-                                            <option value="Competent">Competent</option>
-                                            <option value="Beginner">Beginner</option>
-                                        </select>
+                                    <div class="d-flex justify-content-between gap-20">
+                                        <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
+                                            <label for="provider_level">Provider Level</label>
+                                            <select class="right" id="provider_level" aria-label="Default select example">
+                                                <option selected>Expert</option>
+                                                <option value="proficient">Proficient</option>
+                                                <option value="Competent">Competent</option>
+                                                <option value="Beginner">Beginner</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
+                                            <label for="duration">Duration</label>
+                                            <select class="right" id="duration" aria-label="Default select example">
+                                                <option selected>01 Hour</option>
+                                                <option value="01 Hour">01 Hour</option>
+                                                <option value="02 Hour">02 Hour</option>
+                                                <option value="03 Hour">03 Hour</option>
+                                                <option value="04 Hour">04 Hour</option>
+                                                <option value="05 Hour">05 Hour</option>
+                                            </select>
+                                        </div>
+                                    </div>                               
+                                    <div class="d-flex justify-content-between gap-20">
+                                        <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
+                                            <label for="booking_date">Booking Date</label>
+                                            <select class="right" id="booking_date" aria-label="Default select example">
+                                                <option selected>19.08.2024</option>
+                                                <option value="20.08.2024">20.08.2024</option>
+                                                <option value="21.08.2024">21.08.2024</option>
+                                                <option value="22.08.2024">22 Hour</option>
+                                                <option value="23.08.2024">23.08.2024</option>
+                                                <option value="24.08.2024">19.08.2024</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
+                                            <label for="booking_time">Booking Time</label>
+                                            <select class="right" id="booking_time" aria-label="Default select example">
+                                                <option selected>10:00 am</option>
+                                                <option value="10:00 am">10:00 am</option>
+                                                <option value="11:00 am">11:00 am</option>
+                                                <option value="12:00 am">12:00 am</option>
+                                                <option value="13:00 am">13:00 am</option>
+                                                <option value="14:00 am">14:00 am</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="duration">Duration</label>
-                                        <select class="language-select right" id="duration" aria-label="Default select example">
-                                            <option selected>01 Hour</option>
-                                            <option value="01 Hour">01 Hour</option>
-                                            <option value="02 Hour">02 Hour</option>
-                                            <option value="03 Hour">03 Hour</option>
-                                            <option value="04 Hour">04 Hour</option>
-                                            <option value="05 Hour">05 Hour</option>
-                                        </select>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="booking_date">Booking Date</label>
-                                        <select class="language-select right" id="booking_date" aria-label="Default select example">
-                                            <option selected>19.08.2024</option>
-                                            <option value="20.08.2024">20.08.2024</option>
-                                            <option value="21.08.2024">21.08.2024</option>
-                                            <option value="22.08.2024">22 Hour</option>
-                                            <option value="23.08.2024">23.08.2024</option>
-                                            <option value="24.08.2024">19.08.2024</option>
-                                        </select>
-                                    </div>
-                                    <div class="d-flex flex-column">
-                                        <label for="booking_time">Booking Time</label>
-                                        <select class="language-select right" id="booking_time" aria-label="Default select example">
-                                            <option selected>10:00 am</option>
-                                            <option value="10:00 am">10:00 am</option>
-                                            <option value="11:00 am">11:00 am</option>
-                                            <option value="12:00 am">12:00 am</option>
-                                            <option value="13:00 am">13:00 am</option>
-                                            <option value="14:00 am">14:00 am</option>
-                                        </select>
-                                    </div>
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
                                         <label for="vendor_type">Vendor Type</label>
-                                        <select class="language-select right" id="vendor_type" aria-label="Default select example">
+                                        <select class="right" id="vendor_type" aria-label="Default select example">
                                             <option selected>5.00</option>
                                             <option value="6.00">6.00</option>
                                             <option value="7.00">7.00</option>
@@ -340,19 +344,68 @@
                                             <option value="7.00">5.00</option>
                                         </select>
                                     </div>
-                                    
-                                    <div class="d-flex flex-column">
+                                    <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
                                         <label for="location">Location</label>
-                                        <input type="text" placeholder="Find Location">
+                                        <input type="text" id="location" placeholder="Find Location">
                                     </div>
-
-
                                 </form>
                             </div>
-
+                            <!-- sidebar-widget -->
+                            <div class="sidebar-widget border-bottom pb-24 mb-40">
+                                <h4 class="mb-20">Pricing Range</h4>
+                                <form>
+                                    <div class="d-flex gap-20">
+                                        <div class="d-flex flex-column gap-2 mb-20 sidebar-input-item">
+                                            <label for="minimum">Minimum</label>
+                                            <input class="input-style-2 input-min" type="text" value="2500" id="minimum" placeholder="$500">
+                                        </div>
+                                        <div class="d-flex flex-column gap-2 mb-20 sidebar-input-item ">
+                                            <label for="maximum">Maximum</label>
+                                            <input class="input-style-2 input-max" type="text" value="7500" id="maximum" placeholder="$2000">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="slider mb-20">
+                                    <div class="progress"></div>
+                                    <div class="range-input">
+                                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                                        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                                    </div>
+                                </div>
+                                <h6 class="text-body fw-medium mb-0">Price: $2500 - $3500</h6>
+                            </div>
+                             <!-- sidebar-widget -->
+                             <div class="sidebar-widget">
+                                <h4 class="mb-20">Service Rating</h4>
+                                <div class="categori-list">
+                                    <div class="d-flex justify-content-between mb-10">
+                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">Show All</a></h6>
+                                        <p class="m-0 small">1,500</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-10">
+                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">1 Star and higher</a></h6>
+                                        <p class="m-0 small">1,500</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-10">
+                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">2 Star and higher</a></h6>
+                                        <p class="m-0 small">1,500</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-10">
+                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">3 Star and higher</a></h6>
+                                        <p class="m-0 small">1,500</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-10">
+                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">4 Star and higher</a></h6>
+                                        <p class="m-0 small">1,500</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-10">
+                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">5 Star rating</a></h6>
+                                        <p class="m-0 small">1,500</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <a class="add-banner" href="#">
+                        <a class="add-banner" href="#" target="_blank">
                             <img height="259" class="w-200" src="assets/images/hero/add-banner.png" alt="add-banner">
                         </a>
                     </div>
@@ -645,7 +698,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- ========= End section ========= -->
 
     
 
