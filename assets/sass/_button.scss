@@ -14,6 +14,12 @@
   --bs-btn-active-bg: var(--bs-primary);
   --bs-btn-active-border-color: var(--bs-primary);
 }
+.booking-btn{
+
+  i{
+    margin: 0 4px;
+  }
+}
 .btn-outline {
   --bs-btn-color: var(--bs-heading-color-style2);
   --bs-btn-bg: transparent;

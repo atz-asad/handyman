@@ -13,6 +13,15 @@
         width: 500px;
         transform: translateX(-50%);
         z-index: 1;
+        @include media-breakpoint-down(lg){
+            width: 480px;
+        }
+        @include media-breakpoint-down(lg){
+            width: 400px;
+        }
+        @media only screen and (max-width: 480px) {
+            width: 270px;
+        }
         .blog-slider-prev{
             position: absolute;
             left: -18px;
@@ -36,6 +45,7 @@
     position: relative;
     border-radius: 8px;
     overflow: hidden;
+    
     &::after{
         position: absolute;
         content: '';
@@ -47,6 +57,14 @@
         height: 100%;
         width: 100%;
     }
+
+    @include media-breakpoint-down(lg){
+        height: 400px;
+    }
+    @include media-breakpoint-down(md){
+        height: 360px;
+    }
+    
 }
 .blog-slider-item img{
     width: 100%;
@@ -81,4 +99,81 @@
     text-align: center;
     line-height: 38px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+// booking-from-area
+.booking-from-area {
+    border: 1px solid var(--bs-border);
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    gap: 28px;
+    flex-wrap: wrap;
+    .price{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        del{
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    .btn-primary{
+        box-shadow: rgba(var(--bs-primary-rgb), 0.3) 0px 10px 50px;
+    }
+}
+
+
+// review-card-area
+.review-card-area{
+    background: #FEF9FA;
+    border-radius: 10px;
+    padding: 30px;
+    .review-card-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .review-progress{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .progressbar-wrapper{
+        display: flex;
+        align-items: center;
+        padding-right: 60px;
+    }
+    .single-progressbar{
+       width: 100%;
+    }
+    .progressbar{
+        background: none;
+        margin: 0;
+    }
+    .progressbar-title{
+        width: 100px;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--bs-body-color);
+        font-family: var(--bs-body-font-family);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .percentCount {
+        float: right;
+        margin-top: -17px;
+        clear: both;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--bs-body-color);
+        margin-right: -50px;
+    }
 }

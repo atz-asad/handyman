@@ -12,15 +12,20 @@
     <link rel="stylesheet"  href="assets/css/vendor/all.min.css"> 
     <link rel="stylesheet"  href="assets/css/vendor/fontawesome.min.css"> 
 
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/favicon.png">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet"  href="assets/css/vendor/all.min.css"> 
+    <link rel="stylesheet"  href="assets/css/vendor/fontawesome.min.css"> 
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <!-- wow animate css -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/animate.min.css"> -->
-    <!-- animate -->
     <link rel="stylesheet" href="assets/css/vendor/animate.css">
     <!-- Nice-select -->
     <link rel="stylesheet" href="assets/css/vendor/nice-select.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Progessbar -->
+    <link rel="stylesheet" href="assets/css/vendor/jquery.rprogessbar.min.css">
 
     <!-- Header CSS -->
     <link rel="stylesheet" href="assets/css/header/header.css">
@@ -211,8 +216,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="content text-center">
-                            <h1 class="mb-20 fs-1">All Services</h1>
-                            <nav aria-label="breadcrumb ">
+                            <h1 class="mb-20 fs-1 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">All Services</h1>
+                            <nav aria-label="breadcrumb " class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.5s">
                                 <ol class="breadcrumb justify-content-center mb-0">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">All Services</li>
@@ -226,10 +231,10 @@
         <!-- ========= END BANNER ========= -->
 
         <!-- ========= start section ========= -->
-        <section class="section py-100">
+        <section class="section py-40 py-lg-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-8">
                         <!-- Sidebar Widget Wrapper -->
                         <div class="sidebar-widget-wrapper pt-10 mb-30">
                             <!-- sidebar-widget -->
@@ -374,42 +379,44 @@
                                 </div>
                                 <h6 class="text-body fw-medium mb-0">Price: $2500 - $3500</h6>
                             </div>
-                             <!-- sidebar-widget -->
-                             <div class="sidebar-widget">
-                                <h4 class="mb-20">Service Rating</h4>
-                                <div class="categori-list">
-                                    <div class="d-flex justify-content-between mb-10">
-                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">Show All</a></h6>
-                                        <p class="m-0 small">1,500</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-10">
-                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">1 Star and higher</a></h6>
-                                        <p class="m-0 small">1,500</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-10">
-                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">2 Star and higher</a></h6>
-                                        <p class="m-0 small">1,500</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-10">
-                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">3 Star and higher</a></h6>
-                                        <p class="m-0 small">1,500</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-10">
-                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">4 Star and higher</a></h6>
-                                        <p class="m-0 small">1,500</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-10">
-                                        <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">5 Star rating</a></h6>
-                                        <p class="m-0 small">1,500</p>
-                                    </div>
+                            <!-- sidebar-widget -->
+                            <div class="sidebar-widget">
+                            <h4 class="mb-20">Service Rating</h4>
+                            <div class="categori-list">
+                                <div class="d-flex justify-content-between mb-10">
+                                    <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">Show All</a></h6>
+                                    <p class="m-0 small">1,500</p>
+                                </div>
+                                <div class="d-flex justify-content-between mb-10">
+                                    <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">1 Star and higher</a></h6>
+                                    <p class="m-0 small">1,500</p>
+                                </div>
+                                <div class="d-flex justify-content-between mb-10">
+                                    <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">2 Star and higher</a></h6>
+                                    <p class="m-0 small">1,500</p>
+                                </div>
+                                <div class="d-flex justify-content-between mb-10">
+                                    <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">3 Star and higher</a></h6>
+                                    <p class="m-0 small">1,500</p>
+                                </div>
+                                <div class="d-flex justify-content-between mb-10">
+                                    <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">4 Star and higher</a></h6>
+                                    <p class="m-0 small">1,500</p>
+                                </div>
+                                <div class="d-flex justify-content-between mb-10">
+                                    <h6 class="m-0 fw-medium title"><span class="me-2"><i class="fa-light fa-circle"></i></i></span><a href="#">5 Star rating</a></h6>
+                                    <p class="m-0 small">1,500</p>
                                 </div>
                             </div>
                         </div>
-                        <a class="add-banner" href="#" target="_blank">
-                            <img height="259" class="w-200" src="assets/images/hero/add-banner.png" alt="add-banner">
-                        </a>
+                        </div>
+                        <div class="add-banner">
+                            <a href="#" target="_blank">
+                                <img height="259" class="w-100" src="assets/images/hero/add-banner.png" alt="add-banner">
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 order-first order-lg-0">
                         <div class="mb-30 d-flex justify-content-between gap-10 flex-wrap">
                             <h4>Showing 1 – 9 of 15 results</h4>
                             <form>
@@ -435,7 +442,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Home cleaning services with care</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3500</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4000</del></h6>
@@ -456,7 +463,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Spotless Home Cleaning Services</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3800</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4200</del></h6>
@@ -477,7 +484,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Expert Home Cleaning with Precision</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3800</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4200</del></h6>
@@ -498,7 +505,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Caring and Detailed Home Cleaning</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3500</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4280</del></h6>
@@ -519,7 +526,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Top-Quality Home Cleaning Services</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3600</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4100</del></h6>
@@ -540,7 +547,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Trusted Home Cleaning Solutions</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3600</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4100</del></h6>
@@ -561,7 +568,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Home Cleaning with a Personal</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3600</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4100</del></h6>
@@ -582,7 +589,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Reliable Home Cleaning Services</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3700</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$5900</del></h6>
@@ -603,7 +610,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Insured Home Cleaning with Care</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3190</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4800</del></h6>
@@ -624,7 +631,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Safety-First Home Cleaning Services</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3560</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4150</del></h6>
@@ -645,7 +652,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Safe and Caring Home Cleaning</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3600</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4100</del></h6>
@@ -666,7 +673,7 @@
                                     <div class="single-service-content">
                                         <h6 class="title fw-medium"><a href="#">Clean Homes, Happy Lives</a></h6>
                                         <p class="fw-medium small mb-3">Price start from</p>
-                                        <div class="single-service-footer mb-10 d-flex justify-content-between align-items-center">
+                                        <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
                                             <div class="price d-flex align-items-center gap-10">
                                                 <h5 class="new-price fw-semibold mb-0">$3100</h5>
                                                 <h6 class="old-price small fw-medium mb-0"><del>$4000</del></h6>
@@ -700,15 +707,13 @@
         </section>
         <!-- ========= End section ========= -->
 
-    
-
         <!-- ========= Start Cta section ========= -->
         <section class="section-cta">
             <div class="container">
                 <div class="cta-wrapper" style="background: url(assets/images/cta/cta-bg-3.jpg); background-position:bottom right;background-repeat: no-repeat">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="content py-70 px-50">
+                            <div class="content py-lg-70 py-30 px-lg-50 px-20">
                                 <h2 class="mb-lg-40 mb-30 text-white wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">500+ Expert Person Waiting for Your Next Services</h2>
                                 <a href="#" class="btn btn-primary rounded wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.5s">Start Your Booking</a>
                             </div>
@@ -830,7 +835,9 @@
     <script src="assets/js/vendor/wow.min.js"></script>
     <!-- lazy Image -->
     <script src="assets/js/vendor/lazy.image.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- RProgressbar -->
+    <script src="assets/js/vendor/jQuery.rProgressbar.min.js"></script>
+    <script src="assets/js/vendor/jquery.waypoints.js"></script>
 
     <!-- custom -->
     <script src="assets/js/script.js"></script>

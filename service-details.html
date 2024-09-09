@@ -15,12 +15,11 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <!-- wow animate css -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/animate.min.css"> -->
-    <!-- animate -->
     <link rel="stylesheet" href="assets/css/vendor/animate.css">
     <!-- Nice-select -->
     <link rel="stylesheet" href="assets/css/vendor/nice-select.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Progessbar -->
+    <link rel="stylesheet" href="assets/css/vendor/jquery.rprogessbar.min.css">
 
     <!-- Header CSS -->
     <link rel="stylesheet" href="assets/css/header/header.css">
@@ -211,8 +210,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="content text-center">
-                            <h1 class="mb-20 fs-1">Service Details</h1>
-                            <nav aria-label="breadcrumb ">
+                            <h1 class="mb-20 fs-1 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">Service Details</h1>
+                            <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.5s">
                                 <ol class="breadcrumb justify-content-center mb-0">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Services Details</li>
@@ -226,11 +225,10 @@
         <!-- ========= END BANNER ========= -->
 
         <!-- ========= start section ========= -->
-        <section class="section py-100">
+        <section class="section py-40 py-lg-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-
                         <div class="blog-slider-wrapper mb-30">
                             <div class="swiper blog-slider">
                                 <div class="swiper-wrapper">
@@ -325,15 +323,45 @@
                                 <li><p class="fw-medium mb-2">Bathroom with rain shower</p></li>
                                 <li><p class="fw-medium mb-2">140x200 cm Elite bed</p></li>
                             </ul>
+
+                            <!-- booking-from-area -->
+                            <div class="booking-from-area mb-30 mb-lg-0">
+                                <div class="price">
+                                    <h4 class="m-0">$140.00</h4>
+                                    <del>$200.00</del>
+                                </div>
+                                <form>
+                                    <div class="d-flex gap-lg-80 gap-20 flex-wrap align-items-center ">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fa-light fa-location-dot"></i>
+                                            <select class="language-select" aria-label="Default select example" required>
+                                                <option selected>Singapore city</option>
+                                                <option value="Cameroon">Cameroon city</option>
+                                                <option value="Switzerland">Switzerland city</option>
+                                                <option value="Ireland">Ireland city</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary booking-btn rounded-3"><i class="fa-solid fa-calendar-clock"></i>Booking Now</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-
                     <div class="col-lg-4">
                         <!-- Sidebar Widget Wrapper -->
                         <div class="sidebar-widget-wrapper pt-10 mb-30">    
                             <!-- sidebar-widget -->
                             <div class="sidebar-widget">
-                                <h4 class="mb-20">Service Provider</h4>
+                                <h4 class="mb-24">Service Provider</h4>
+                                <div class="sidebar-header mb-24">
+                                    <div class="brand-logo">
+                                        <img src="assets/images/brand-logo.png" alt="logo">
+                                    </div>
+                                    <div class="sidebar-header-content">
+                                        <h6 class="fw-medium body-font">Care Communication Ltd</h6>
+                                        <p class="small fw-medium mb-0">619 Francisco Blvd E,  Rafael, CA 94</p>
+                                    </div>
+                                </div>
                                 <form>
                                     <div class="d-flex flex-column gap-2 mb-20 w-100 sidebar-input-item ">
                                         <label for="first_name">First Name</label>
@@ -360,14 +388,296 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="sidebar-widget-style-2">
+                            <h4 class="mb-3">Our Location Address</h4>
+                            <div class="location-image mb-24">
+                                <img src="assets/images/location-image.png" alt="Location">
+                            </div>
+                            <table>
+                                <tr>
+                                  <td class="left"><p>Location:</p></td>
+                                  <td class="right"><p>Jhone Road, 123 Street, Japan</p></td>
+                                </tr>
+                                <tr>
+                                  <td class="left"><p>Phone:</p></td>
+                                  <td class="right"><a href="tel:12345678901">+00123 456 78901</a></td>
+                                </tr>
+                                <tr>
+                                  <td class="left"><p>Email:</p></td>
+                                  <td class="right"><a href="mailto:someone@example.com">youremail@example.com</a></td>
+                                </tr>
+                                <tr>
+                                  <td class="left"><p>Website:</p></td>
+                                  <td class="right"><a href="#">www.yourwebsite.com</a></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
         <!-- ========= End section ========= -->
 
+        <!-- ========= Start Service section ========= -->
+        <section class="section-service pb-40 pb-lg-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-header d-flex justify-content-between flex-wrap gap-20 mb-lg-40 mb-30">
+                            <h2 class="mb-0 wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.3s">More Related Services</h2>
+                            <div class="service-btn wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.3s">
+                                <a href="#" class="btn btn-primary rounded">More Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-service-item p-14  mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <div class="single-service-image ">
+                                <img src="assets/images/service/service-1.png" alt="service">
+                                <span class="favorite">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                            </div>
+                            <div class="single-service-content">
+                                <h6 class="title fw-medium"><a href="#">Home cleaning services with care</a></h6>
+                                <p class="fw-medium small mb-3">Price start from</p>
+                                <div class="author-meta">
+                                    <div class="author-image">
+                                        <img src="assets/images/service/author-1.png" alt="author">
+                                    </div>
+                                    <h6 class="author-name mb-0 fw-medium"><a class="text-decoration-none" href="#">Robert Danials</a></h6>
+                                </div>
+                                <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
+                                    <div class="price d-flex align-items-center gap-10">
+                                        <h5 class="new-price fw-semibold mb-0">$3500</h5>
+                                        <h6 class="old-price small fw-medium mb-0"><del>$4000</del></h6>
+                                    </div>
+                                    <a href="#" class="btn btn-outline rounded">Booking Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-service-item p-14  mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="single-service-image">
+                                <img src="assets/images/service/service-2.png" alt="service">
+                                <span class="favorite">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                            </div>
+                            <div class="single-service-content">
+                                <h6 class="title fw-medium"><a href="#">Expert Home Cleaning with Precision</a></h6>
+                                <p class="fw-medium small mb-3">Price start from</p>
+                                <div class="author-meta">
+                                    <div class="author-image">
+                                        <img src="assets/images/service/author-1.png" alt="author">
+                                    </div>
+                                    <h6 class="author-name mb-0 fw-medium"><a class="text-decoration-none" href="#">Robert Danials</a></h6>
+                                </div>
+                                <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
+                                    <div class="price d-flex align-items-center gap-10">
+                                        <h5 class="new-price fw-semibold mb-0">$3800</h5>
+                                        <h6 class="old-price small fw-medium mb-0"><del>$4200</del></h6>
+                                    </div>
+                                    <a href="#" class="btn btn-outline rounded">Booking Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-service-item p-14  mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="single-service-image">
+                                <img src="assets/images/service/service-3.png" alt="service">
+                                <span class="favorite">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                            </div>
+                            <div class="single-service-content">
+                                <h6 class="title fw-medium"><a href="#">Caring and Detailed Home Cleaning</a></h6>
+                                <p class="fw-medium small mb-3">Price start from</p>
+                                <div class="author-meta">
+                                    <div class="author-image">
+                                        <img src="assets/images/service/author-1.png" alt="author">
+                                    </div>
+                                    <h6 class="author-name mb-0 fw-medium"><a class="text-decoration-none" href="#">Robert Danials</a></h6>
+                                </div>
+                                <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
+                                    <div class="price d-flex align-items-center gap-10">
+                                        <h5 class="new-price fw-semibold mb-0">$3500</h5>
+                                        <h6 class="old-price small fw-medium mb-0"><del>$4280</del></h6>
+                                    </div>
+                                    <a href="#" class="btn btn-outline rounded">Booking Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-service-item p-14  mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="single-service-image">
+                                <img src="assets/images/service/service-4.png" alt="service">
+                                <span class="favorite">
+                                    <i class="fa-regular fa-heart"></i>
+                                </span>
+                            </div>
+                            <div class="single-service-content">
+                                <h6 class="title fw-medium"><a href="#">Trusted Home Cleaning Solutions</a></h6>
+                                <p class="fw-medium small mb-3">Price start from</p>
+                                <div class="author-meta">
+                                    <div class="author-image">
+                                        <img src="assets/images/service/author-1.png" alt="author">
+                                    </div>
+                                    <h6 class="author-name mb-0 fw-medium"><a class="text-decoration-none" href="#">Robert Danials</a></h6>
+                                </div>
+                                <div class="single-service-footer mb-10 d-flex flex-wrap gap-10 justify-content-between align-items-center">
+                                    <div class="price d-flex align-items-center gap-10">
+                                        <h5 class="new-price fw-semibold mb-0">$3600</h5>
+                                        <h6 class="old-price small fw-medium mb-0"><del>$4100</del></h6>
+                                    </div>
+                                    <a href="#" class="btn btn-outline rounded">Booking Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========= End Service section ========= -->
     
+        <!-- ========= Start Review section ========= -->
+        <section class="section-review pb-40 pb-lg-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-header mb-lg-40 mb-30">
+                            <h2 class="mb-0 wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.3s">Guests Review of Lamaridian</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="review-card-area">
+                            <div class="review-card-header mb-20">
+                                <h3>Reviews Statas (4.0)</h3>
+                                <h4>Total :2,840 </h4>
+                            </div>
+
+                            <!-- Review Progress -->
+                            <div class="review-progress">
+
+                                <div class="progressbar-wrapper">
+                                    <h4 class="progressbar-title"><i class="fa-light fa-square"></i>5-Star</h4>
+                                    <div class="progressbar">
+                                        <div class="5-Star"></div>
+                                    </div>
+                                </div>
+                                <div class="progressbar-wrapper">
+                                    <h4 class="progressbar-title"><i class="fa-light fa-square"></i>4-Star</h4>
+                                    <div class="progressbar">
+                                        <div class="4-Star"></div>
+                                    </div>
+                                </div>
+                                <div class="progressbar-wrapper">
+                                    <h4 class="progressbar-title"><i class="fa-light fa-square"></i>3-Star</h4>
+                                    <div class="progressbar">
+                                        <div class="3-Star"></div>
+                                    </div>
+                                </div>
+                                <div class="progressbar-wrapper">
+                                    <h4 class="progressbar-title"><i class="fa-light fa-square"></i>2-Star</h4>
+                                    <div class="progressbar">
+                                        <div class="2-Star"></div>
+                                    </div>
+                                </div>
+                                <div class="progressbar-wrapper">
+                                    <h4 class="progressbar-title"><i class="fa-light fa-square"></i>1-Star</h4>
+                                    <div class="progressbar">
+                                        <div class="1-Star"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= Start Testmonial section ========= -->
+        <section class="section-testmonial pb-40 pb-lg-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- slider-wrapper -->
+                        <div class="slider-wrapper-4 position-relative">
+                            <div class="swiper testmonial-slider-4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide testmonial-slider-item-style-4">
+                                        <div class="testmonial-slider-item-header pb-30">
+                                            <div class="author-image">
+                                                <img src="assets/images/testimonial/testimonial-8.png" alt="author">
+                                            </div>
+                                            <div class="author-content">
+                                                <h4 class="author-name"><a href="#">Zames Robert</a></h4>
+                                                <ul class="author-meta">
+                                                    <li class="author-meta-item">
+                                                        <p><i class="fa-light fa-location-dot"></i>Bali, Indonesia</p>
+                                                    </li>
+                                                    <li class="author-meta-item ">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                        <p>(4.6)</p>
+                                                    </li>
+                                                    <li class="author-meta-item">
+                                                        <i class="fa-regular fa-clock"></i><p>20.01.2024</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p class="m-0">We booked this place because we are kids who love farms. We had a goat sheep for a cat and a chicken for our kids. Alastair and Nok were very sweet and served toast and mangoes for breakfast. There was plenty to see with outstanding......</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testmonial-slider-item-style-4">
+                                        <div class="testmonial-slider-item-header pb-30">
+                                            <div class="author-image">
+                                                <img src="assets/images/testimonial/testimonial-7.png" alt="author">
+                                            </div>
+                                            <div class="author-content">
+                                                <h4 class="author-name"><a href="#">Zames Robert</a></h4>
+                                                <ul class="author-meta">
+                                                    <li class="author-meta-item">
+                                                        <p><i class="fa-light fa-location-dot"></i>Bali, Indonesia</p>
+                                                    </li>
+                                                    <li class="author-meta-item ">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                        <p>(4.6)</p>
+                                                    </li>
+                                                    <li class="author-meta-item">
+                                                        <i class="fa-regular fa-clock"></i><p>20.01.2024</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p class="m-0">We booked this place because we are kids who love farms. We had a goat sheep for a cat and a chicken for our kids. Alastair and Nok were very sweet and served toast and mangoes for breakfast. There was plenty to see with outstanding......</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========= End Testmonial section ========= -->
 
         <!-- ========= Start Cta section ========= -->
         <section class="section-cta">
@@ -375,7 +685,7 @@
                 <div class="cta-wrapper" style="background: url(assets/images/cta/cta-bg-3.jpg); background-position:bottom right;background-repeat: no-repeat">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="content py-70 px-50">
+                            <div class="content py-lg-70 py-30 px-lg-50 px-20">
                                 <h2 class="mb-lg-40 mb-30 text-white wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">500+ Expert Person Waiting for Your Next Services</h2>
                                 <a href="#" class="btn btn-primary rounded wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.5s">Start Your Booking</a>
                             </div>
@@ -497,7 +807,9 @@
     <script src="assets/js/vendor/wow.min.js"></script>
     <!-- lazy Image -->
     <script src="assets/js/vendor/lazy.image.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- RProgressbar -->
+    <script src="assets/js/vendor/jQuery.rProgressbar.min.js"></script>
+    <script src="assets/js/vendor/jquery.waypoints.js"></script>
 
     <!-- custom -->
     <script src="assets/js/script.js"></script>

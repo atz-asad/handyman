@@ -20899,14 +20899,16 @@ img {
   border: 0;
   margin: 0 0 0 5px;
   font-family: "Font Awesome 6 Pro";
-  font-size: 12px;
-  top: 3px;
+  font-size: 13px;
+  line-height: 1;
+  top: 4px;
   position: relative;
   transition: all 0.3s ease;
 }
 
 .nav-link:hover.dropdown-toggle::after {
   transform: rotate(90deg);
+  margin: 0px 0 0 5px;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
@@ -21219,6 +21221,10 @@ Header Buttons
   --bs-btn-active-color: var(--bs-white);
   --bs-btn-active-bg: var(--bs-primary);
   --bs-btn-active-border-color: var(--bs-primary);
+}
+
+.booking-btn i {
+  margin: 0 4px;
 }
 
 .btn-outline {
@@ -21712,6 +21718,64 @@ Header Buttons
   box-shadow: none;
   border: 1px solid var(--bs-border);
   outline: none;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sidebar-header .sidebar-header .brand-logo {
+  height: 60px;
+  width: 60px;
+  max-width: 60px;
+  flex: 0 0 60px;
+}
+
+.sidebar-widget-style-2 {
+  background: #FEF9FA;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid var(--bs-border);
+}
+.sidebar-widget-style-2 .location-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.sidebar-widget-style-2 .location-image img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.sidebar-widget-style-2 .left {
+  padding-right: 100px;
+}
+@media (max-width: 1399.98px) {
+  .sidebar-widget-style-2 .left {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .sidebar-widget-style-2 .left {
+    padding-right: 20px;
+  }
+}
+.sidebar-widget-style-2 .left p {
+  margin-bottom: 7px;
+  color: #171725;
+}
+.sidebar-widget-style-2 .right a {
+  text-decoration: none;
+}
+.sidebar-widget-style-2 .right p {
+  margin-bottom: 7px;
+}
+@media (max-width: 1199.98px) {
+  .sidebar-widget-style-2 .right {
+    font-size: 14px;
+  }
 }
 
 .slider {
@@ -22592,6 +22656,9 @@ Header Buttons
   bottom: 30px;
 }
 
+/*============================
+=====testmonial-slider-4 =====
+==============================*/
 .testmonial-iamge-wrapper-2 {
   position: relative;
   height: 340px;
@@ -22829,6 +22896,79 @@ Header Buttons
   text-decoration: none;
 }
 
+/*=================================
+===== testmonial-slider-4 =========
+=================================*/
+.testmonial-slider-item-style-4 {
+  border: 1px solid var(--bs-border);
+  padding: 24px;
+  border-radius: 8px;
+}
+.testmonial-slider-item-style-4 .testmonial-slider-item-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.testmonial-slider-item-style-4 .author-name {
+  transition: all 0.3s ease;
+}
+.testmonial-slider-item-style-4 .author-name a {
+  text-decoration: none;
+}
+.testmonial-slider-item-style-4 .author-name:hover {
+  color: var(--bs-primary);
+}
+.testmonial-slider-item-style-4 .author-image {
+  height: 68px;
+  width: 68px;
+  flex: 0 0 60px;
+  border-radius: 50%;
+  position: relative;
+}
+.testmonial-slider-item-style-4 .author-image::after {
+  position: absolute;
+  content: "";
+  background: url(../images/testimonial/check-circle.png);
+  right: 0;
+  bottom: 0;
+  height: 20px;
+  width: 20px;
+}
+.testmonial-slider-item-style-4 .author-image img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+}
+.testmonial-slider-item-style-4 .author-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.testmonial-slider-item-style-4 .author-meta .author-meta-item {
+  display: flex;
+  align-items: center;
+  border-right: 1.5px solid var(--bs-body-color);
+  padding-right: 10px;
+}
+.testmonial-slider-item-style-4 .author-meta .author-meta-item i {
+  margin-right: 5px;
+}
+.testmonial-slider-item-style-4 .author-meta .author-meta-item .fa-star {
+  color: #FFCB3D;
+}
+.testmonial-slider-item-style-4 .author-meta .author-meta-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+.testmonial-slider-item-style-4 .author-meta .author-meta-item:last-child {
+  border-right: none;
+}
+
 /***********************************/
 /********  SECTION CTA CSS *********/
 /***********************************/
@@ -22864,6 +23004,21 @@ Header Buttons
   transform: translateX(-50%);
   z-index: 1;
 }
+@media (max-width: 991.98px) {
+  .blog-slider-wrapper .blog-slider-thumb-wrapper {
+    width: 480px;
+  }
+}
+@media (max-width: 991.98px) {
+  .blog-slider-wrapper .blog-slider-thumb-wrapper {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .blog-slider-wrapper .blog-slider-thumb-wrapper {
+    width: 270px;
+  }
+}
 .blog-slider-wrapper .blog-slider-thumb-wrapper .blog-slider-prev {
   position: absolute;
   left: -18px;
@@ -22896,6 +23051,16 @@ Header Buttons
   z-index: 1;
   height: 100%;
   width: 100%;
+}
+@media (max-width: 991.98px) {
+  .blog-slider-item {
+    height: 400px;
+  }
+}
+@media (max-width: 767.98px) {
+  .blog-slider-item {
+    height: 360px;
+  }
 }
 
 .blog-slider-item img {
@@ -22932,6 +23097,79 @@ Header Buttons
   text-align: center;
   line-height: 38px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.booking-from-area {
+  border: 1px solid var(--bs-border);
+  padding: 16px 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.booking-from-area .price {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.booking-from-area .price del {
+  font-size: 18px;
+  font-weight: 500;
+}
+.booking-from-area .btn-primary {
+  box-shadow: rgba(var(--bs-primary-rgb), 0.3) 0px 10px 50px;
+}
+
+.review-card-area {
+  background: #FEF9FA;
+  border-radius: 10px;
+  padding: 30px;
+}
+.review-card-area .review-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.review-card-area .review-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.review-card-area .progressbar-wrapper {
+  display: flex;
+  align-items: center;
+  padding-right: 60px;
+}
+.review-card-area .single-progressbar {
+  width: 100%;
+}
+.review-card-area .progressbar {
+  background: none;
+  margin: 0;
+}
+.review-card-area .progressbar-title {
+  width: 100px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--bs-body-color);
+  font-family: var(--bs-body-font-family);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.review-card-area .percentCount {
+  float: right;
+  margin-top: -17px;
+  clear: both;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--bs-body-color);
+  margin-right: -50px;
 }
 
 /*# sourceMappingURL=style.css.map */

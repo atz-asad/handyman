@@ -43,7 +43,6 @@
   }
 
 }
-
 .testmonial-wrapper{
   position: relative;
 
@@ -83,7 +82,9 @@
   }
 }
 
-
+/*============================
+=====testmonial-slider-4 =====
+==============================*/
 .testmonial-iamge-wrapper-2{
   position: relative;
   height: 340px;
@@ -195,7 +196,6 @@
     object-fit: cover;
   }
 }
-
 .testmonial-wrapper-2{
   padding-left: 80px;
   position: relative;
@@ -228,7 +228,6 @@
   }
 }
 
-
 .testmonial-thump-2{
   .testmonial-thump-item{
     display: flex;
@@ -253,7 +252,6 @@
   
 
 }
-
 
 // ====== slider-wrapper 3 ======
 .slider-wrapper-3{
@@ -305,7 +303,86 @@
 }
 
 
+/*=================================
+===== testmonial-slider-4 =========
+=================================*/
+.testmonial-slider-item-style-4{
+  border:1px solid var(--bs-border);
+  padding: 24px;
+  border-radius: 8px;
+  .testmonial-slider-item-header{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
 
+  .author-name{
+    transition: all 0.3s ease;
+    a{
+      text-decoration: none;
+    }
+    &:hover{
+      color: var(--bs-primary);
+    }
+  }
+  .author-image{
+    height: 68px;
+    width: 68px;
+    flex: 0 0 60px;
+    border-radius: 50%;
+    position: relative;
+
+    &::after{
+      position: absolute;
+      content: '';
+      background: url(../images/testimonial/check-circle.png);
+      right: 0;
+      bottom: 0;
+      height: 20px;
+      width: 20px;
+    }
+    img{
+      max-width: 100%;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .author-meta{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+
+    .author-meta-item{
+      display: flex;
+      align-items: center;
+      border-right: 1.5px solid var(--bs-body-color);
+      padding-right: 10px;
+      i{
+        margin-right: 5px;
+      }
+
+      .fa-star{
+        color: #FFCB3D;
+      }
+
+      p{
+        margin: 0;
+        font-size: 16px;
+        line-height: 1;
+      }
+
+      &:last-child{
+        border-right: none;
+      }
+    }
+    
+  }
+}
   /***********************************/
  /********  SECTION CTA CSS *********/
 /***********************************/

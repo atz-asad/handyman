@@ -69,13 +69,16 @@
   border: 0;
   margin: 0  0 0 5px;
   font-family: "Font Awesome 6 Pro";
-  font-size: 12px;
-  top: 3px;
+  font-size: 13px;
+  line-height: 1;
+  top: 4px;
   position: relative;
   transition: all 0.3s ease;
 }
 .nav-link:hover.dropdown-toggle::after{
   transform: rotate(90deg);
+  margin: 0px 0 0 5px;
+  
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   color:  #15100C;
