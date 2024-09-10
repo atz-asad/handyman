@@ -150,8 +150,8 @@
         background: var(--bs-primary);
     }
 }
-// category-slide-item
-.category-slide-item{
+// category-item-style-3
+.category-item-style-3{
     border-radius: 8px;
     height: 295px;
     position: relative;
@@ -161,6 +161,7 @@
         width: 100%;
         object-fit: cover;
         border-radius: 8px;
+        transition: transform  0.3s ;
     }
     .category-contend{
         position: absolute;
@@ -182,6 +183,9 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 18.98%, #000000 87.63%);
         height: 100%;
         width: 100%;
+    }
+    &:hover img{
+        transform: scale(1.1);
     }
 }
 // Category Slider home 2 end
