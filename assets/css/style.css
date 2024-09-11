@@ -20830,6 +20830,111 @@ img {
   box-shadow: rgba(var(--bs-primary-rgb), 0.8) 0px 3px 10px;
 }
 
+/*
+==============================
+====== Preloder =============
+===========================
+*/
+.preloader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: visible;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  background: var(--bs-body-bg);
+}
+.preloader .preloder-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: var(--bs-body-bg);
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: 99;
+}
+.preloader .preloder-area .loder-logo-area {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+}
+.preloader .preloder-area .loder-logo-area .loder-logo {
+  animation: scale-down-center 900ms linear 1000ms infinite alternate both;
+}
+.preloader .preloder-area span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animateball 2.5s linear infinite;
+}
+.preloader .preloder-area span::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bs-primary);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px var(--bs-primary);
+}
+.preloader .preloder-area::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--bs-primary);
+  border-right: 3px solid var(--bs-primary);
+  border-radius: 50%;
+  animation: animateC 2.5s linear infinite;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animateball {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+}
+/*==========================
+=======================*/
 /**************************/
 /******** header CSS ******/
 /**************************/
@@ -21216,12 +21321,66 @@ Header Buttons
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-border-color: var(--bs-primary);
-  --bs-btn-hover-color: var(--bs-primary);
-  --bs-btn-hover-bg: transparent;
-  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-border-color: var(--bs-heading-color-style2);
   --bs-btn-active-color: var(--bs-white);
   --bs-btn-active-bg: var(--bs-primary);
-  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-heading-color-style2);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.btn-primary::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  content: "";
+  background: var(--bs-heading-color-style2);
+  border-radius: 50%;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  transform: translateY(0) scale(2);
+}
+
+.btn-primary-2 {
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-white);
+  --bs-btn-active-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-white);
+  --bs-btn-active-border-color: var(--bs-white);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.btn-primary-2::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  content: "";
+  background: var(--bs-white);
+  border-radius: 50%;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: -1;
+}
+
+.btn-primary-2:hover::before {
+  transform: translateY(0) scale(2);
 }
 
 .booking-btn i {
@@ -21332,12 +21491,9 @@ Header Buttons
 .hero-style-1 {
   position: relative;
   z-index: 2;
-  overflow: hidden;
 }
 .hero-style-1 .hero-image {
-  display: flex;
-  justify-content: flex-start;
-  width: 939px;
+  width: clamp(29.875rem, -0.925rem + 49.677vw, 58.688rem);
   height: 596px;
 }
 @media (max-width: 991.98px) {
@@ -21422,6 +21578,9 @@ Header Buttons
   align-items: center;
   max-height: 52px;
 }
+.hero-style-1 .pading-left {
+  padding-left: clamp(0rem, -13.3621rem + 21.5517vw, 12.5rem);
+}
 .hero-style-1 .hero-from-wrapper-2 {
   border-radius: 50px;
 }
@@ -21477,6 +21636,11 @@ Header Buttons
   width: 100%;
 }
 
+@media (min-width: 992px) {
+  .container-lg-fluid {
+    max-width: 100%;
+  }
+}
 /**************************/
 /******** nav CSS *********/
 /**************************/
@@ -21805,8 +21969,8 @@ Header Buttons
 
 .range-input input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   background-color: var(--bs-primary); /* Color of the handles */
   border-radius: 50%;
   pointer-events: auto;
@@ -21815,8 +21979,8 @@ Header Buttons
 }
 
 .range-input input[type=range]::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   background-color: var(--bs-primary);
   border-radius: 50%;
   pointer-events: auto;

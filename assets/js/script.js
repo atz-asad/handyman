@@ -462,6 +462,12 @@
     });
 
 
+    if ($('.preloader').length > 0) {
+        window.onload = function() {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('hidden');
+        };
+    }
 
 
 

@@ -133,3 +133,122 @@ img{
 }
 
 
+
+/*
+==============================
+====== Preloder =============
+===========================
+*/
+
+// .preloader.hidden{
+//   visibility: hidden; 
+//   opacity: 0;
+// }
+
+.preloader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: visible;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  background: var(--bs-body-bg);
+  .preloder-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: var(--bs-body-bg);
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    z-index: 99;
+
+    .loder-logo-area {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 30px;
+      width: 30px;
+      overflow: hidden;
+
+      .loder-logo {
+        animation: scale-down-center 900ms linear 1000ms infinite alternate both;
+      }
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 50%;
+      width: 50%;
+      height: 4px;
+      background: transparent;
+      transform-origin: left;
+      animation: animateball 2.5s linear infinite;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--bs-primary);
+        top: -6px;
+        right: -8px;
+        box-shadow: 0 0 20px var(--bs-primary);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid var(--bs-primary);
+      border-right: 3px solid var(--bs-primary);
+      border-radius: 50%;
+      animation: animateC 2.5s linear infinite;
+    }
+  }
+}
+
+@keyframes animateC{
+0%{
+  transform:rotate(0deg);
+}
+100%{
+  transform:rotate(360deg);
+}
+}
+@keyframes animateball{
+0%{
+  transform:rotate(45deg);
+}
+100%{
+  transform:rotate(405deg);
+}
+}
+
+
+@keyframes scale-down-center {
+  0%{
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  100%{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+  }
+}
+/*==========================
+=======================*/
