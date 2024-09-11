@@ -20835,6 +20835,11 @@ img {
 ====== Preloder =============
 ===========================
 */
+.preloader.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .preloader {
   height: 100%;
   width: 100%;
