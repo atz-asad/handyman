@@ -107,6 +107,55 @@ img{
       transform: rotate(90deg);
   }
 }
+
+@keyframes animateC{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+  }
+  @keyframes animateball{
+  0%{
+    transform:rotate(45deg);
+  }
+  100%{
+    transform:rotate(405deg);
+  }
+  }
+  
+  
+@-moz-keyframes scale-down-center {
+  0%{
+      -moz-transform: scale(1);
+      transform: scale(1);
+  }
+  100%{
+      -moz-transform: scale(0.7);
+      transform: scale(0.7);
+  }
+}
+@-webkit-keyframes scale-down-center {
+  0%{
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  100%{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+  }
+}
+@keyframes scale-down-center {
+  0%{
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  100%{
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+  }
+}
 /*=====================================
 ======== Custom Animation ============
 ======================================*/
@@ -131,8 +180,6 @@ img{
     box-shadow: rgba(var(--bs-primary-rgb), 0.8) 0px 3px 10px;
   }
 }
-
-
 
 /*
 ==============================
@@ -222,33 +269,5 @@ img{
   }
 }
 
-@keyframes animateC{
-0%{
-  transform:rotate(0deg);
-}
-100%{
-  transform:rotate(360deg);
-}
-}
-@keyframes animateball{
-0%{
-  transform:rotate(45deg);
-}
-100%{
-  transform:rotate(405deg);
-}
-}
-
-
-@keyframes scale-down-center {
-  0%{
-      -webkit-transform: scale(1);
-      transform: scale(1);
-  }
-  100%{
-      -webkit-transform: scale(0.7);
-      transform: scale(0.7);
-  }
-}
 /*==========================
 =======================*/

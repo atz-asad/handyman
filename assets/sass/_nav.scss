@@ -307,11 +307,6 @@
 }
 
 
-
-
-
-
-
 // Range Slider
 .slider {
   position: relative;
@@ -341,11 +336,11 @@
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
-  background-color: var(--bs-primary); /* Color of the handles */
+  background-color: var(--bs-primary);
   border-radius: 50%;
   pointer-events: auto;
   cursor: pointer;
-  border: 2px solid white; /* For visible thumb edges */
+  border: 2px solid white;
 }
 
 .range-input input[type="range"]::-moz-range-thumb {
@@ -358,3 +353,34 @@
   border: 2px solid white;
 }
 
+/*=================================
+==========================
+================*/
+
+.form-group, .input-group {
+  position: relative;
+}
+
+.form-group.icon-start .icon, .input-group.icon-start .icon {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  font-size: var(--font-sm);
+  margin-inline-end: auto;
+  margin-inline-start: 20px !important;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.form-group.icon-start .form-control, .input-group.icon-start .form-control {
+  padding: 12px 16px 12px 44px;
+}
+.color-primary {
+  color: var(--bs-primary) !important;
+}
+
+.btn-icon {
+  font-size: 20px;
+  font-weight: 600;
+}

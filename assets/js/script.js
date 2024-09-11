@@ -404,6 +404,9 @@
             effect: 'fade',
             centeredSlides: true,
             loop: true,
+            fadeEffect: {
+                crossFade: true
+            },
             navigation: {
               nextEl: ".blog-slider-next",
               prevEl: ".blog-slider-prev",
@@ -468,9 +471,6 @@
             preloader.classList.add('hidden');
         };
     }
-
-
-
 
     
 })(jQuery);

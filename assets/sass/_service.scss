@@ -545,3 +545,53 @@
         color: var(--bs-primary);
     }
 }
+
+
+// vandor-card
+.vandor-card{
+    border: 1px solid var(--bs-border);
+    padding: 14px;
+    border-radius: 14px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+
+    .vandor-card-image{
+        height: 100px;
+        max-width: 100px;
+        border-radius: 50%;
+        position: relative;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            background: url(../images/testimonial/check-circle.png);
+            right: 8px;
+            bottom: 8px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .vandor-card-title{
+        font-weight: 500;
+        transition: all 0.3s ease;
+        a{
+            text-decoration: none;
+        }
+        &:hover{
+            color: var(--bs-primary);
+        }
+    }
+    .ratings{
+        i{
+            color: #FFCB3D;
+        }
+    }
+    &:hover{
+        border: 1px solid var(--bs-primary);
+    }
+}
