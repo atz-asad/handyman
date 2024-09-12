@@ -206,13 +206,14 @@
         yearElement.innerHTML = currentYear;
     }
 
+
+    // back-to-top
     $(document).ready(function() {
         $('.back-to-top').click(function() {
             $('html, body').animate({scrollTop: 0}, 1000, 'swing');
             return false;
         });
     });
-    
 
     if ($('.category-slider').length > 0) {
         var swiper = new Swiper(".category-slider", {

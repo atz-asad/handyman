@@ -63,6 +63,15 @@ img{
   height: auto;
 }
 
+.primary-shadow{
+  box-shadow: 0 12px 30px -8px rgba(var(--bs-primary-rgb), 0.5);
+}
+
+@media (min-width: 992px) {
+  .container-lg-fluid {
+      max-width: 100%;
+  }
+}
 
 /*=====================================
 ======== Custom Animation ============

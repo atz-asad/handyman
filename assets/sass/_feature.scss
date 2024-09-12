@@ -110,7 +110,6 @@
     }
 }
 
-
 .feature-style-3{
     position: relative;
     .image-wrapper{
@@ -205,4 +204,54 @@
            transform: inherit;
         }
     }
+}
+
+
+
+
+/*=============================
+==========================
+=======================*/
+// .widget-area .widget-author-details {
+//     position: relative;
+//     margin-top: 30px;
+//     overflow: visible;
+//     z-index: 1;
+// }
+
+
+.color-green {
+    color: #00b67a;
+}
+
+.widget-author-card{
+
+    .author-img{
+        height: 80px;
+        width: 80px;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-top: -60px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .list-item{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .author-list-frist{
+        flex: 0 0 auto;
+        width: calc(50% - 13px);
+        display: flex;
+        color: var(--bs-heading-color);
+    }
+    .author-list-last{
+        word-break: break-all;
+    }
+
 }

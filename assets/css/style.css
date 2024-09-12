@@ -20768,6 +20768,15 @@ img {
   height: auto;
 }
 
+.primary-shadow {
+  box-shadow: 0 12px 30px -8px rgba(var(--bs-primary-rgb), 0.5);
+}
+
+@media (min-width: 992px) {
+  .container-lg-fluid {
+    max-width: 100%;
+  }
+}
 /*=====================================
 ======== Custom Animation ============
 ======================================*/
@@ -21661,11 +21670,25 @@ Header Buttons
   width: 100%;
 }
 
-@media (min-width: 992px) {
-  .container-lg-fluid {
-    max-width: 100%;
-  }
+.author-banner-card {
+  display: flex;
+  gap: 20px;
 }
+.author-banner-card .author-image {
+  flex: 0 0 auto;
+  width: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.author-banner-card .author-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.author-banner-card .ratings i {
+  color: #FFCB3D;
+}
+
 /**************************/
 /******** nav CSS *********/
 /**************************/
@@ -22843,6 +22866,40 @@ Header Buttons
   .feature-style-3 .single-feature-item:nth-child(even) {
     transform: inherit;
   }
+}
+
+/*=============================
+==========================
+=======================*/
+.color-green {
+  color: #00b67a;
+}
+
+.widget-author-card .author-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: -60px;
+}
+.widget-author-card .author-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.widget-author-card .list-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.widget-author-card .author-list-frist {
+  flex: 0 0 auto;
+  width: calc(50% - 13px);
+  display: flex;
+  color: var(--bs-heading-color);
+}
+.widget-author-card .author-list-last {
+  word-break: break-all;
 }
 
 /***********************************/
