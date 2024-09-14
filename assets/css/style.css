@@ -1,4 +1,34 @@
 @charset "UTF-8";
+/*
+************
+*************************
+
+Template Name: handyman
+Author: kreativdev
+Author URI: https://themeforest.net/user/kreativdev
+Description: handyman is service HTML template.
+Tags: cleaning, housekeeping, laundry, carpet cleaning, window cleaning, deep cleaning, deep cleaning, maid service, home organization.
+Version: 1.0.0
+-----------------------------------------------------------------------------------
+
+>>> TABLE OF CONTENTS:
+=================== 
+01. global css
+02. header css
+03. button css
+04. hero css
+05. nav css
+06. service css
+07. feature css
+08. testimonial css
+09. category css
+10. feature css
+11. blog css
+12. footer css
+
+
+******************************************************* 
+*************************************************************** */
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -20862,6 +20892,20 @@ img {
     transform: scale(0.7);
   }
 }
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
 /*=====================================
 ======== Custom Animation ============
 ======================================*/
@@ -21346,9 +21390,6 @@ Header Buttons
 }
 
 /**************************/
-/******** footer CSS ******/
-/**************************/
-/**************************/
 /******** Buttons CSS ******/
 /**************************/
 .btn-primary {
@@ -21409,7 +21450,7 @@ Header Buttons
   background: var(--bs-white);
   border-radius: 50%;
   transform: translateY(100%);
-  transition: transform 0.5s cubic-bezier(0.3, 1, 0.8, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
   z-index: -1;
 }
 
@@ -21435,30 +21476,6 @@ Header Buttons
   font-size: 12px;
   font-weight: 500;
   padding: 7px 14px;
-}
-
-.play-btn {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: var(--bs-heading-color);
-  text-decoration: none;
-  font-family: var(--bs-body-font-family);
-  color: var(--bs-heading-color);
-  font-size: 16px;
-  font-weight: 600;
-}
-.play-btn i {
-  width: 48px;
-  height: 48px;
-  background: #21D496;
-  color: var(--bs-white);
-  box-shadow: 0px 25px 50px rgba(33, 212, 150, 0.24);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
 }
 
 .read_more_btn {
@@ -21492,6 +21509,29 @@ Header Buttons
 }
 .read_more_btn:hover::after {
   transform: scale(1);
+}
+
+.play-btn {
+  height: 88px;
+  width: 88px;
+  background: var(--bs-white);
+  text-align: center;
+  line-height: 88px;
+  font-size: 30px;
+  border-radius: 50%;
+  color: var(--bs-primary);
+  animation: pulse 1.5s linear infinite;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding-left: 5px;
+  z-index: 1;
+}
+.play-btn:hover {
+  background: var(--bs-black);
+  color: var(--bs-white);
 }
 
 .socials {
@@ -21559,7 +21599,7 @@ Header Buttons
 }
 .hero-style-1 .hero-from-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.7fr;
+  grid-template-columns: 1fr 1fr 0.6fr;
   border: 1px solid var(--bs-border);
   border-radius: 12px;
   background: var(--bs-white);
@@ -21740,7 +21780,7 @@ Header Buttons
   width: 8px;
   height: 2px;
   background: var(--bs-body-color);
-  top: 13px;
+  top: 14px;
   position: relative;
 }
 
@@ -22067,6 +22107,11 @@ Header Buttons
 .btn-icon {
   font-size: 20px;
   font-weight: 600;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 /****************************/
@@ -23855,5 +23900,9 @@ tr .contact-info-content a:hover {
   width: max-content;
   border-radius: 3px;
 }
+
+/**************************/
+/******** footer CSS ******/
+/**************************/
 
 /*# sourceMappingURL=style.css.map */

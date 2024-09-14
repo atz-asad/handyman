@@ -1,3 +1,34 @@
+/*
+************
+*************************
+
+Template Name: handyman
+Author: kreativdev
+Author URI: https://themeforest.net/user/kreativdev
+Description: handyman is service HTML template.
+Tags: cleaning, housekeeping, laundry, carpet cleaning, window cleaning, deep cleaning, deep cleaning, maid service, home organization.
+Version: 1.0.0
+-----------------------------------------------------------------------------------
+
+>>> TABLE OF CONTENTS:
+=================== 
+01. global css
+02. header css
+03. button css
+04. hero css
+05. nav css
+06. service css
+07. feature css
+08. testimonial css
+09. category css
+10. feature css
+11. blog css
+12. footer css
+
+
+******************************************************* 
+*************************************************************** */
+
 
 @import "custom"; 
 
@@ -5,7 +36,6 @@
 
 @import "global";
 @import "header";
-@import "footer";
 @import "button";
 @import "hero";
 @import "nav";
@@ -13,4 +43,5 @@
 @import "feature";
 @import "testimonial";
 @import "blog";
+@import "footer";
 
