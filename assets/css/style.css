@@ -23270,6 +23270,10 @@ Header Buttons
   text-decoration: none;
 }
 
+.testmonial-slider-item-style-3 .author-image [data-src] {
+  height: 100%;
+}
+
 /*=================================
 ===== testmonial-slider-4 =========
 =================================*/
