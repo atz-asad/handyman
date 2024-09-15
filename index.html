@@ -6,7 +6,7 @@
     <meta name="keywords" content="Handyman Html Template">
     <title>Handyman || Home One</title>
 
-<!-- favicon -->
+    <!-- favicon -->
     <link rel="icon" href="assets/images/favicon.png">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet"  href="assets/css/vendor/all.min.css"> 
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/vendor/jquery.rprogessbar.min.css">
     <!-- venobox -->
     <link rel="stylesheet" href="assets/css/vendor/venobox.min.css">
+    <!-- daterangepicker -->
+    <link rel="stylesheet" href="assets/css/vendor/daterangepicker.css">
     <!-- Header CSS -->
     <link rel="stylesheet" href="assets/css/header/header.css">
     <!-- Footer CSS -->
@@ -223,10 +225,10 @@
 
         <!-- ======= START HERO section ========= -->
         <section class="section-hero hero-style-1 pt-20">
-            <div class="container container-lg-fluid">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 ">
-                        <div class="hero-content pading-left mb-30 pe-lg-20">
+                        <div class="hero-content pading-left mb-30 pe-xl-40">
                             <h1 class="hero-title mb-24 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">Comprehensive <br> Handyman Services for <br> a Perfect Home <img class="rotate" src="assets/images/hero/vector.png" alt="vector"></h1>
                             <p class="fw-medium hero-desc pe-lg-120 mb-40 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.5s">Nestled in the heart of the Pacific Islands resort, on the edge of a tranquil and beautiful Garden Island, CozyStay is a haven</p>
                             <form action="#" class="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.7s">
@@ -260,9 +262,9 @@
                                         <div class="d-flex gap-14">
                                             <div class="time">
                                                 <h6 class="fw-medium body-font small mb-2">Time</h6>
-                                                <div class="hero-date">
-                                                    <!-- <i class="fa-light fa-calendar"></i> -->
-                                                    <input type="date" required>
+                                                <div class="d-flex gap-1 align-items-center">
+                                                    <i class="fa-light fa-calendar"></i>
+                                                    <input type="text" class="mt-n-3" name="pickupDate" placeholder="10 jan 24" />
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn btn-primary rounded hero-from-button">Search <i class="fa-light fa-magnifying-glass"></i></button>
@@ -273,8 +275,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="hero-image">
-                            <img src="assets/images/hero/hero.png" alt="hero">
+                        <div class="hero-image hero-image-style-1">
+                            <img src="assets/images/hero/hero-1.png" alt="hero">
                         </div>
                     </div>
                 </div>
@@ -431,7 +433,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-service-item p-14  mb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                             <div class="single-service-image ">
-                                <img src="assets/images/placeholder.svg" data-data-src="assets/images/service/service-1.png" alt="service">
+                                <img src="assets/images/placeholder.svg" data-src="assets/images/service/service-1.png" alt="service">
                                 <span class="favorite">
                                     <i class="fa-regular fa-heart"></i>
                                 </span>
@@ -1535,6 +1537,9 @@
     <script src="assets/js/vendor/lazy.image.js"></script>
     <!-- venobox -->
     <script src="assets/js/vendor/venobox.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="assets/js/vendor/moment.min.js"></script>
+    <script src="assets/js/vendor/daterangepicker.min.js"></script>
     <!-- RProgressbar -->
     <script src="assets/js/vendor/jQuery.rProgressbar.min.js"></script>
     <script src="assets/js/vendor/jquery.waypoints.js"></script>

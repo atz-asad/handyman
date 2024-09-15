@@ -477,6 +477,22 @@
         selector: '.my-video-links',
     });
 
+
+    
+    // pickupDate
+    $('input[name="pickupDate"]').daterangepicker({
+        "singleDatePicker": true,
+        autoUpdateInput: false,
+    });
+    $('input[name="pickupDate"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY'));
+    });
+    $('input[name="pickupDate"]').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+    // pickupDate
+
+    
     
 })(jQuery);
 

@@ -37,12 +37,12 @@
 .btn-primary-2{
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var(--bs-primary);
-  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-border-color: none;
   --bs-btn-hover-color: var(--bs-primary);
-  --bs-btn-hover-border-color: var(--bs-white);
+  --bs-btn-hover-border-color: none;
   --bs-btn-active-color: var(--bs-primary);
   --bs-btn-active-bg: var(--bs-white);
-  --bs-btn-active-border-color: var(--bs-white);
+  --bs-btn-active-border-color: none;
   z-index: 1;
   overflow: hidden;
   position: relative;
@@ -126,36 +126,59 @@
   }
 }
 
-//  play-btn
-.play-btn {
-  height: 88px;
-  width: 88px;
-  background: var(--bs-white);
+
+
+// video-btn
+.video-btn {
+  --size: 88px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  font-size: 32px;
+  display: flex;
   text-align: center;
-  line-height: 88px;
-  font-size: 30px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   color: var(--bs-primary);
-  animation: pulse 1.5s linear infinite;
-  transition: all 0.4s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding-left: 5px;
+  background: var(--bs-white);
   z-index: 1;
-  &:hover{
-    background: var(--bs-black);
-    color: var(--bs-white);
+  text-decoration: none;
+  i{
+    margin-left: 5px;
+
   }
+}
+.video-btn::before, .video-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: rgba(var(--bs-white-rgb), 0.8);
   
 }
+.video-btn::before {
+  animation: ripple 2s linear infinite;
+  z-index: -1;
+}
+.video-btn::after {
+  animation: ripple 2s linear 1s infinite;
+  z-index: -2;
+}
 
-
-
-
-
-
+.video-btn.p-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 
 
 

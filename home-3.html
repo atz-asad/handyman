@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/vendor/jquery.rprogessbar.min.css">
     <!-- venobox -->
     <link rel="stylesheet" href="assets/css/vendor/venobox.min.css">
+    <!-- daterangepicker -->
+    <link rel="stylesheet" href="assets/css/vendor/daterangepicker.css">
     <!-- Header CSS -->
     <link rel="stylesheet" href="assets/css/header/header.css">
     <!-- Footer CSS -->
@@ -262,9 +264,9 @@
                                         <div class="d-flex gap-14">
                                             <div class="time">
                                                 <h6 class="fw-medium body-font small mb-2">Time</h6>
-                                                <div class="hero-date">
-                                                    <!-- <i class="fa-light fa-calendar"></i> -->
-                                                    <input type="date" required>
+                                                <div class="d-flex gap-1 align-items-center">
+                                                    <i class="fa-light fa-calendar"></i>
+                                                    <input type="text" name="pickupDate" placeholder="10 jan 24" />
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn btn-primary rounded hero-from-button">Search <i class="fa-light fa-magnifying-glass"></i></button>
@@ -1081,7 +1083,7 @@
                 <div class="feature-style-3">
                     <div class="image-wrapper position-relative">
                         <img src="assets/images/feature/feature-image-3.png" alt="feature-image">
-                        <a href="https://www.youtube.com/watch?v=QSwvg9Rv2EI" class="play-btn position-absolute top-50 start-50 translate-middle my-video-links" data-autoplay="true" data-vbtype="video"><i class="fa-solid fa-play"></i></a>
+                        <a href="https://www.youtube.com/watch?v=QSwvg9Rv2EI" class="video-btn p-absolute my-video-links" data-autoplay="true" data-vbtype="video"><i class="fa-solid fa-play"></i></a>
                     </div>
                     <div class="feature-item-wrapper">
 
@@ -1466,6 +1468,9 @@
     <script src="assets/js/vendor/lazy.image.js"></script>
     <!-- venobox -->
     <script src="assets/js/vendor/venobox.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="assets/js/vendor/moment.min.js"></script>
+    <script src="assets/js/vendor/daterangepicker.min.js"></script>
     <!-- RProgressbar -->
     <script src="assets/js/vendor/jQuery.rProgressbar.min.js"></script>
     <script src="assets/js/vendor/jquery.waypoints.js"></script>

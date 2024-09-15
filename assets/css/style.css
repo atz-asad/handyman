@@ -20906,6 +20906,15 @@ img {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
+@keyframes ripple {
+  0% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
 /*=====================================
 ======== Custom Animation ============
 ======================================*/
@@ -21140,6 +21149,10 @@ img {
   }
 }
 /* ============ desktop view .end// ============ */
+.navbar .dropdown .dropdown-menu {
+  --bs-dropdown-min-width: 12rem;
+}
+
 .navbar .dropdown .dropdown-menu.show {
   transition: all 0.5s ease-in-out;
   --bs-border-radius: 0 0 10px 10px;
@@ -21428,12 +21441,12 @@ Header Buttons
 .btn-primary-2 {
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var(--bs-primary);
-  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-border-color: none;
   --bs-btn-hover-color: var(--bs-primary);
-  --bs-btn-hover-border-color: var(--bs-white);
+  --bs-btn-hover-border-color: none;
   --bs-btn-active-color: var(--bs-primary);
   --bs-btn-active-bg: var(--bs-white);
-  --bs-btn-active-border-color: var(--bs-white);
+  --bs-btn-active-border-color: none;
   z-index: 1;
   overflow: hidden;
   position: relative;
@@ -21511,27 +21524,56 @@ Header Buttons
   transform: scale(1);
 }
 
-.play-btn {
-  height: 88px;
-  width: 88px;
-  background: var(--bs-white);
+.video-btn {
+  --size: 88px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  font-size: 32px;
+  display: flex;
   text-align: center;
-  line-height: 88px;
-  font-size: 30px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   color: var(--bs-primary);
-  animation: pulse 1.5s linear infinite;
-  transition: all 0.4s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding-left: 5px;
+  background: var(--bs-white);
   z-index: 1;
+  text-decoration: none;
 }
-.play-btn:hover {
-  background: var(--bs-black);
-  color: var(--bs-white);
+.video-btn i {
+  margin-left: 5px;
+}
+
+.video-btn::before, .video-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: rgba(var(--bs-white-rgb), 0.8);
+}
+
+.video-btn::before {
+  animation: ripple 2s linear infinite;
+  z-index: -1;
+}
+
+.video-btn::after {
+  animation: ripple 2s linear 1s infinite;
+  z-index: -2;
+}
+
+.video-btn.p-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .socials {
@@ -21569,6 +21611,7 @@ Header Buttons
 .hero-style-1 .hero-image {
   width: clamp(29.875rem, -0.925rem + 49.677vw, 58.688rem);
   height: 596px;
+  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .hero-style-1 .hero-image {
@@ -21589,7 +21632,7 @@ Header Buttons
   }
 }
 .hero-style-1 .hero-image img {
-  max-width: none;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -21634,7 +21677,7 @@ Header Buttons
 .hero-style-1 .hero-from-wrapper .hero-date {
   width: 130px;
 }
-.hero-style-1 .hero-from-wrapper input[type=date] {
+.hero-style-1 .hero-from-wrapper input {
   width: 120px;
   height: 20px;
   border: none;
@@ -21651,9 +21694,6 @@ Header Buttons
   justify-content: center;
   align-items: center;
   max-height: 52px;
-}
-.hero-style-1 .pading-left {
-  padding-left: clamp(0rem, -13.3621rem + 21.5517vw, 12.5rem);
 }
 .hero-style-1 .hero-from-wrapper-2 {
   border-radius: 50px;
@@ -22375,6 +22415,12 @@ Header Buttons
   font-family: var(--bs-body-font-family);
   color: var(--bs-body-color);
 }
+.single-service-item .author-name {
+  transition: all 0.3s ease;
+}
+.single-service-item .author-name:hover {
+  color: var(--bs-primary);
+}
 .single-service-item .single-service-footer .new-price {
   color: var(--bs-heading-color-style2);
 }
@@ -22410,6 +22456,12 @@ Header Buttons
   left: 0;
   bottom: 0;
   z-index: 2;
+}
+.single-service-item-style-2 .author-name {
+  transition: all 0.3s ease;
+}
+.single-service-item-style-2 .author-name:hover {
+  color: var(--bs-primary);
 }
 .single-service-item-style-2 .number-wrapper {
   display: flex;
@@ -22564,6 +22616,10 @@ Header Buttons
 .single-service-item-3 .author-meta .author-name {
   font-family: var(--bs-body-font-family);
   color: var(--bs-body-color);
+  transition: all 0.3s ease;
+}
+.single-service-item-3 .author-meta .author-name:hover {
+  color: var(--bs-primary);
 }
 .single-service-item-3 .single-service-footer .new-price {
   color: var(--bs-heading-color-style2);

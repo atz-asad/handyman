@@ -272,6 +272,12 @@
             color: var(--bs-body-color);
         }
     }
+    .author-name{
+        transition: all 0.3s ease;
+        &:hover{
+            color: var(--bs-primary);
+        }
+    }
     .single-service-footer{
         .new-price{
             color: var(--bs-heading-color-style2);
@@ -309,7 +315,12 @@
         bottom: 0;
         z-index: 2;
     }
-
+    .author-name{
+        transition: all 0.3s ease;
+        &:hover{
+            color: var(--bs-primary);
+        }
+    }
     .number-wrapper{
         display: flex;
         gap: 12px;
@@ -391,6 +402,7 @@
     &:hover .single-service-image img{
         transform: scale(1.1);
     }
+    
     .single-service-image{
         height: 100%;
         width: 345px;
@@ -463,6 +475,10 @@
         .author-name{
             font-family: var(--bs-body-font-family);
             color: var(--bs-body-color);
+            transition: all 0.3s ease;
+            &:hover{
+                color: var(--bs-primary);
+            }
         }
     }
     .single-service-footer{

@@ -125,7 +125,9 @@
   }
 }
 /* ============ desktop view .end// ============ */
-
+.navbar .dropdown .dropdown-menu{
+  --bs-dropdown-min-width: 12rem;
+}
 .navbar .dropdown .dropdown-menu.show {
   transition: all .5s ease-in-out;
   --bs-border-radius: 0 0 10px 10px;
