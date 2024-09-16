@@ -1,0 +1,29 @@
+
+/*
+************
+*************************/
+
+[type="tel"], [type="url"], [type="email"], [type="number"] {
+    direction: rtl;
+}
+
+/***********
+***************/
+
+.nice-select:after { 
+    border-right: inherit;
+    right: inherit;
+}
+.category-pagination{
+    width: max-content !important;
+}
+
+.sidebar-input-item .nice-select::after{
+    right: 20px;
+}
+
+.slider-wrapper-3 .testmonial-pagination {
+    left: 50%;
+    right: inherit;
+    transform: translatex(-50%);
+}
