@@ -32,3 +32,7 @@
     background-position: bottom left !important;
     background-repeat: no-repeat !important;
 }
+
+.video-btn i {
+    margin-left: 5px;
+}
