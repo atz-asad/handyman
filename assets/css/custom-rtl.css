@@ -27,3 +27,8 @@
     right: inherit;
     transform: translatex(-50%);
 }
+
+.cta-wrapper{
+    background-position: bottom left !important;
+    background-repeat: no-repeat !important;
+}

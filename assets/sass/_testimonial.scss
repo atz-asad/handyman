@@ -397,6 +397,10 @@
   z-index: 1;
   border-radius: 12px;
   overflow: hidden;
+  overflow: hidden;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom right !important;
   &::after{
     position: absolute;
     left: 0;

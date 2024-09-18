@@ -20994,12 +20994,10 @@ img {
   animation: animateC 2.5s linear infinite;
 }
 
-/*==========================
-=======================*/
+/*=========== Preloder end css ========*/
 /**************************/
 /******** header CSS ******/
 /**************************/
-/* bootstap header menu */
 .navbar .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -21771,6 +21769,19 @@ Header Buttons
   color: var(--bs-white);
 }
 
+.nav-tabs-style-2 {
+  background: #FFF0F3;
+  padding: 14px 24px;
+  border-radius: 8px;
+}
+.nav-tabs-style-2 .nav-link {
+  border: 1px solid transparent;
+  outline: 0;
+}
+.nav-tabs-style-2 .nav-link:hover {
+  border: 1px solid transparent;
+}
+
 /*****************************/
 /******** breadcrumb *********/
 /****************************/
@@ -22029,18 +22040,18 @@ Header Buttons
     padding-left: 20px;
   }
 }
-.sidebar-widget-style-2 .left p {
+.sidebar-widget-style-2 .right p {
   margin-bottom: 7px;
   color: #171725;
 }
-.sidebar-widget-style-2 .right a {
+.sidebar-widget-style-2 .left a {
   text-decoration: none;
 }
-.sidebar-widget-style-2 .right p {
+.sidebar-widget-style-2 .left p {
   margin-bottom: 7px;
 }
 @media (max-width: 1199.98px) {
-  .sidebar-widget-style-2 .right {
+  .sidebar-widget-style-2 .left {
     font-size: 14px;
   }
 }
@@ -22698,6 +22709,7 @@ Header Buttons
   position: absolute;
   content: "";
   background: url(../images/testimonial/check-circle.png);
+  background-size: contain;
   left: 8px;
   bottom: 8px;
   height: 20px;
@@ -23879,62 +23891,164 @@ tr .contact-info-content a:hover {
   background-position: 100% 100%;
 }
 
-.single-package {
+/*=========================================
+======== pricing single-package ==========
+=======================================*/
+.pricing-single-package {
+  padding: 0px 40px 30px 40px;
+  border-radius: 20px;
   position: relative;
-  padding: 30px 15px;
-  margin-bottom: 30px;
-  border: 1px solid var(--bs-border);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  border-radius: 6px;
+  overflow: hidden;
 }
-
-.single-package p {
-  color: #202e39;
-  font-size: 1.875rem;
-  line-height: 1.2;
-  font-weight: 500;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+.pricing-single-package .single-package-header-area {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
-
-.single-package p span {
-  display: block;
-  font-size: 0.75rem;
-  color: #979797;
-  text-transform: uppercase;
+.pricing-single-package .single-package-header-area .icon {
+  background: #ECEFFF;
+  border-radius: 0px 0px 12px 12px;
+  padding: 46px 18px 20px 18px;
 }
-
-.single-package ul li span {
+.pricing-single-package .single-package-header-area .icon img {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+}
+.pricing-single-package .header-title-area {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.pricing-single-package .header-title-area .header-title {
+  line-height: 0.5;
+}
+.pricing-single-package .header-title-area .popular {
+  background: #FFF0F3;
+  border-radius: 16px;
+  padding: 6px 22px;
   color: var(--bs-primary);
+  display: inline-block;
+  width: max-content;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
-
-.single-package h4 + span, .single-package .h4 + span {
-  font-size: 0.75rem;
-  color: #979797;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  display: block;
-  padding-bottom: 10px;
+.pricing-single-package .description {
+  color: #8D8D8D;
 }
-
-.single-package .pupular-pack {
-  position: absolute;
-  text-transform: uppercase;
+.pricing-single-package .price-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pricing-single-package .price-title span {
+  font-family: var(--bs-body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--bs-body-color);
+}
+.pricing-single-package .pricing-list .icon i {
+  --size: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  font-size: 14px;
   color: var(--bs-white);
   background-color: var(--bs-primary);
-  font-size: 11px;
-  top: -9px;
-  margin: auto;
+  border-radius: 50%;
+}
+.pricing-single-package .btn {
+  padding: 18px 40px 18px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+}
+.pricing-single-package::after {
+  position: absolute;
+  content: "";
+  top: 0;
   right: 0;
   left: 0;
-  padding: 5px 10px;
-  letter-spacing: 1px;
-  width: max-content;
-  border-radius: 3px;
+  bottom: 0;
+  background: var(--bs-primary);
+  transform: translateY(calc(-100% - 2px));
+  z-index: -1;
+  transition: transform 0.4s ease-out;
+  z-index: -1;
 }
 
+.pricing-single-package.active {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+.pricing-single-package.active .single-package-header-area {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+.pricing-single-package.active .single-package-header-area .icon {
+  background: #FFF0F3;
+}
+.pricing-single-package.active .price-title span,
+.pricing-single-package.active .description,
+.pricing-single-package.active .price-title,
+.pricing-single-package.active .header-title {
+  color: var(--bs-white);
+}
+.pricing-single-package.active .list-item {
+  color: var(--bs-white);
+}
+.pricing-single-package.active .list-item-text {
+  color: var(--bs-white);
+}
+.pricing-single-package.active .pricing-list .icon i {
+  color: var(--bs-primary);
+  background-color: var(--bs-white);
+}
+.pricing-single-package.active .btn {
+  background: var(--bs-white);
+  color: var(--bs-primary);
+}
+.pricing-single-package.active .btn:hover {
+  color: var(--bs-white);
+}
+.pricing-single-package.active .included {
+  color: var(--bs-white);
+}
+
+.pricing-single-package:hover::after {
+  transform: none;
+}
+
+.pricing-single-package:hover .included,
+.pricing-single-package:hover .description,
+.pricing-single-package:hover .price-title,
+.pricing-single-package:hover .header-title,
+.pricing-single-package:hover .list-item,
+.pricing-single-package:hover .list-item-text,
+.pricing-single-package:hover .price-title span {
+  color: var(--bs-white);
+}
+
+.pricing-single-package:hover .pricing-list .icon i {
+  color: var(--bs-primary);
+  background-color: var(--bs-white);
+}
+
+.pricing-single-package:hover .btn {
+  background: var(--bs-white);
+  color: var(--bs-primary);
+}
+.pricing-single-package:hover .btn:hover {
+  color: var(--bs-white);
+}
+
+/*============================
+=======================================*/
 /**************************/
 /******** footer CSS ******/
 /**************************/

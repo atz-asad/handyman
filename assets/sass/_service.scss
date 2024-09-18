@@ -586,6 +586,7 @@
             position: absolute;
             content: "";
             background: url(../images/testimonial/check-circle.png);
+            background-size: contain;
             right: 8px;
             bottom: 8px;
             height: 20px;

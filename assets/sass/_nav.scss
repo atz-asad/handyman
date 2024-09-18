@@ -30,6 +30,20 @@
   }
 }
 
+.nav-tabs-style-2{
+  background: #FFF0F3;
+  padding: 14px 24px;
+  border-radius: 8px;
+
+  .nav-link {
+    border: 1px solid transparent;
+    outline: 0;
+    &:hover{
+      border: 1px solid transparent;
+    }
+  }
+}
+
   /*****************************/
  /******** breadcrumb *********/
 /****************************/
