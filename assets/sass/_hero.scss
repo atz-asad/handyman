@@ -74,7 +74,10 @@
             color: var(--bs-body-color);
             font-size: 14px;
             font-weight: normal;
-            transform: translateY(-2px);
+            
+        }
+        .datepicker{
+            // transform: translateY(4px);
         }
         .hero-from-button{
             display: flex;

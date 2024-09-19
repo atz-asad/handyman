@@ -21657,7 +21657,6 @@ Header Buttons
   color: var(--bs-body-color);
   font-size: 14px;
   font-weight: normal;
-  transform: translateY(-2px);
 }
 .hero-style-1 .hero-from-wrapper .hero-from-button {
   display: flex;
@@ -21777,6 +21776,7 @@ Header Buttons
 .nav-tabs-style-2 .nav-link {
   border: 1px solid transparent;
   outline: 0;
+  color: var(--bs-heading-color);
 }
 .nav-tabs-style-2 .nav-link:hover {
   border: 1px solid transparent;
@@ -23399,6 +23399,10 @@ Header Buttons
   z-index: 1;
   border-radius: 12px;
   overflow: hidden;
+  overflow: hidden;
+  background-attachment: scroll !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom left !important;
 }
 .cta-wrapper::after {
   position: absolute;
@@ -23921,7 +23925,7 @@ tr .contact-info-content a:hover {
   flex-direction: column;
 }
 .pricing-single-package .header-title-area .header-title {
-  line-height: 0.5;
+  line-height: 1;
 }
 .pricing-single-package .header-title-area .popular {
   background: #FFF0F3;
