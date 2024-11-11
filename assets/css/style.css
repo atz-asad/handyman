@@ -20771,6 +20771,10 @@ textarea.form-control-lg {
   --bs-heading-font-family: "Marcellus", serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21605,11 +21609,11 @@ Header Buttons
 .hero-style-1 {
   position: relative;
   z-index: 2;
+  overflow-x: hidden;
 }
 .hero-style-1 .hero-image {
-  width: clamp(29.875rem, -0.925rem + 49.677vw, 58.688rem);
-  height: 596px;
-  overflow: hidden;
+  width: clamp(29.875rem, -0.925rem + 50.677vw, 59.688rem);
+  height: 600px;
 }
 @media (max-width: 991.98px) {
   .hero-style-1 .hero-image {
@@ -21633,6 +21637,7 @@ Header Buttons
   object-fit: cover;
   height: 100%;
   width: 100%;
+  max-width: none;
 }
 .hero-style-1 .nice-select {
   height: 17px;
@@ -21746,7 +21751,6 @@ Header Buttons
   height: 100%;
   width: 100%;
 }
-
 .author-banner-card {
   display: flex;
   gap: 20px;

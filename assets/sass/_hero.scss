@@ -6,10 +6,10 @@
 .hero-style-1{
     position: relative;
     z-index: 2;
+    overflow-x: hidden;
     .hero-image{
-        width: clamp(29.875rem, -0.925rem + 49.677vw, 58.688rem);
-        height: 596px;
-        overflow: hidden;
+        width: clamp(29.875rem, -0.925rem + 50.677vw, 59.688rem);
+        height: 600px;
         @include media-breakpoint-down(lg){
             width: 100%;
             height: 500px;
@@ -26,6 +26,7 @@
             object-fit: cover;
             height: 100%;
             width: 100%;
+            max-width: none;
             
         }
     }
@@ -141,6 +142,9 @@
         }
     }
 
+    .nice-select .list{
+        
+    }
 
 }
 

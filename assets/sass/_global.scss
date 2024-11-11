@@ -36,6 +36,9 @@
 
 }
 
+body{
+  overflow-x: hidden;
+}
 
 html {
   scroll-behavior: smooth;
@@ -72,6 +75,7 @@ img{
       max-width: 100%;
   }
 }
+
 
 /*=====================================
 ======== Custom Animation ============
