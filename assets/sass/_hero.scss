@@ -1,3 +1,4 @@
+
 /*************************/
 /******** Hero css ******/
 /***********************/
@@ -7,6 +8,60 @@
     position: relative;
     z-index: 2;
     overflow-x: hidden;
+    @include media-breakpoint-up(xxl){
+        .extra-padding-left{
+            padding-inline-start: calc((100vw - 1430px) / 2);
+        }
+    }
+    @include media-breakpoint-up(xl){
+        .extra-padding-left{
+            padding-inline-start: calc((100vw - 1450px) / 2);
+        }
+    }
+    @media screen and (min-device-width: 992px) and (max-device-width: 1199px) { 
+        .extra-padding-left{
+            padding-inline-start: calc((100vw - 1120px) / 2);
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .extra-padding-left{
+            padding-inline-start: 0;
+        }
+    }
+    .nice-select .list {
+        overflow-y: scroll;
+        max-height: 250px;
+        scrollbar-width: thin; /* Firefox */
+        width: max-content;
+        height: max-content;
+        border: 1px solid var(--bs-border);
+        li{
+            border: 1px solid var(--bs-border);
+            &:hover{
+                background: var(--bs-primary);
+                border: 1px solid var(--bs-primary);
+                color: var(--bs-white);
+            }
+        }
+    }
+    /* Chrome, Edge, Safari */
+    .nice-select .list::-webkit-scrollbar {
+        width: 4px; /* Scrollbar width */
+    }
+    .nice-select .list::-webkit-scrollbar-track {
+        background: var(--bs-primary); /* Track color */
+        border-radius: 4px; /* Rounded corners for the track */
+    }
+    .nice-select .list::-webkit-scrollbar-thumb {
+        background-color: #007BFF; /* Thumb color */
+        border-radius: 4px; /* Rounded corners for the thumb */
+        border: 2px solid #f0f0f0; /* Space around thumb */
+    }
+
+    .nice-select .list::-webkit-scrollbar-thumb:hover {
+        background-color: #0056b3; /* Darker color on hover */
+    }
+   
     .hero-image{
         width: clamp(29.875rem, -0.925rem + 50.677vw, 59.688rem);
         height: 600px;
@@ -41,6 +96,8 @@
         border: 1px solid var(--bs-border);
         border-radius: 12px;
         background: var(--bs-white);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
         @include media-breakpoint-down(xxl){
             grid-template-columns: 1fr; 
         }
